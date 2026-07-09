@@ -9,6 +9,8 @@
 <meta property="og:description" content="Lakeside cottages & private villa buyouts near Udaipur. Book direct on WhatsApp for the best rates.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.theudaisarovar.com">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Resort","name":"The Udaisarovar - Lakeside Paradise","url":"https://www.theudaisarovar.com","telephone":"+918829809555","priceRange":"₹3,000–₹39,999","address":{"@type":"PostalAddress","streetAddress":"Lakadwas","addressLocality":"Udaipur","addressRegion":"Rajasthan","postalCode":"313003","addressCountry":"IN"},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Lake view"},{"@type":"LocationFeatureSpecification","name":"Private cottages"},{"@type":"LocationFeatureSpecification","name":"Full villa buyout"},{"@type":"LocationFeatureSpecification","name":"Event garden"},{"@type":"LocationFeatureSpecification","name":"Free parking"}],"parentOrganization":{"@type":"Organization","name":"JD Group of Companies","url":"https://www.myjdgroup.com"}}
 </script>
@@ -69,8 +71,14 @@ section{padding:88px 0}
 @media(max-width:960px){.stay-grid{grid-template-columns:1fr}}
 .stay{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--white)}
 .stay .visual{height:170px;display:flex;align-items:flex-end;padding:18px 24px;color:var(--mist)}
-.v-cottage{background:linear-gradient(160deg,#1e5f6e,#2e7482 70%,#3b8593)}
-.v-villa{background:linear-gradient(160deg,#123f4d,#1e5f6e 70%,#28707e)}
+.v-cottage{background:linear-gradient(180deg,rgba(11,42,52,.08),rgba(11,42,52,.5)),url("assets/cottages.jpg") center 45%/cover no-repeat}
+.v-villa{background:linear-gradient(180deg,rgba(11,42,52,.08),rgba(11,42,52,.5)),url("assets/villa-room.jpg") center 60%/cover no-repeat}
+/* POOL BANNER */
+.pool-banner{position:relative;min-height:440px;background:linear-gradient(180deg,rgba(11,42,52,.35),rgba(11,42,52,.65)),url("assets/pool.jpg") center 58%/cover no-repeat;display:flex;align-items:flex-end}
+.pool-banner .wrap{padding-bottom:56px;color:var(--mist)}
+.pool-banner h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400}
+.pool-banner p{max-width:480px;color:#dce8e6;margin:10px 0 0}
+.dine-photo{width:100%;border-radius:8px;display:block;margin-bottom:20px;max-height:340px;object-fit:cover}
 .v-camp{background:linear-gradient(180deg,rgba(11,42,52,.15),rgba(11,42,52,.55)),url("assets/camping.jpg") center 70%/cover no-repeat}
 /* GALLERY */
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
@@ -126,7 +134,7 @@ footer a{color:var(--sand);text-decoration:none}
 
 <nav class="sans">
   <div class="wrap">
-    <a class="logo" href="#top">The <b>Udaisarovar</b></a>
+    <a class="logo" href="#top" style="display:flex;align-items:center;gap:10px"><img src="assets/logo.jpg" alt="The Udaisarovar logo" style="height:36px;width:36px;border-radius:50%">The <b>Udaisarovar</b></a>
     <div class="nav-links">
       <a href="#stay">Stay</a>
       <a href="#gallery">Gallery</a>
@@ -151,6 +159,7 @@ footer a{color:var(--sand);text-decoration:none}
 
 <div class="quickbar sans">
   <div class="wrap">
+    <div>Lakefront <span>infinity pool</span></div>
     <div>Cottages from <span>₹3,000</span></div>
     <div>Full villa from <span>₹18,000</span></div>
     <div><span>Direct booking</span> — no commission</div>
@@ -214,10 +223,21 @@ footer a{color:var(--sand);text-decoration:none}
       <h2>Evenings at the lake</h2>
     </div>
     <div class="gal">
+      <figure><img src="assets/room.jpg" alt="Cottage bedroom at The Udaisarovar" loading="lazy"><figcaption>Cottage bedrooms</figcaption></figure>
       <figure><img src="assets/goldenhour.jpg" alt="Golden hour over the lake at The Udaisarovar" loading="lazy"><figcaption>Golden hour on the shore</figcaption></figure>
       <figure><img src="assets/bonfire.jpg" alt="Bonfire night with music at The Udaisarovar" loading="lazy"><figcaption>Bonfire &amp; music nights</figcaption></figure>
+      <figure><img src="assets/movienight.jpg" alt="Open-air movie night by the lake" loading="lazy"><figcaption>Cinema under the stars</figcaption></figure>
+      <figure><img src="assets/lawn.jpg" alt="Lakeside lawns and tents at The Udaisarovar" loading="lazy"><figcaption>Lawns by the water</figcaption></figure>
       <figure><img src="assets/palms.jpg" alt="Lakeside camping tents under palm trees" loading="lazy"><figcaption>Camp under the palms</figcaption></figure>
     </div>
+  </div>
+</section>
+
+<section class="pool-banner" id="pool">
+  <div class="wrap">
+    <div class="kicker sans" style="letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--jd-soft)">The pool</div>
+    <h2>Swim to the edge of the lake</h2>
+    <p>Our infinity pool sits right on the waterline — palms, hills and open sky in every direction.</p>
   </div>
 </section>
 
@@ -244,6 +264,7 @@ footer a{color:var(--sand);text-decoration:none}
     </div>
     <div class="dine">
       <div>
+        <img class="dine-photo" src="assets/dining.jpg" alt="Fresh food served lakeside at The Udaisarovar" loading="lazy">
         <p>Our kitchen cooks the way Rajasthani homes do — fresh paneer, slow dals, hot chapatis and seasonal vegetables, with breakfast by the water and dinner under the stars. Meal plans can be added to any stay.</p>
       </div>
       <div class="dine-rates sans">
