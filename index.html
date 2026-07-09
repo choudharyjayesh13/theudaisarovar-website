@@ -136,6 +136,7 @@ footer a{color:var(--sand);text-decoration:none}
   <div class="wrap">
     <a class="logo" href="#top" style="display:flex;align-items:center;gap:10px"><img src="assets/logo.jpg" alt="The Udaisarovar logo" style="height:36px;width:36px;border-radius:50%">The <b>Udaisarovar</b></a>
     <div class="nav-links">
+      <a href="#book-online">Book</a>
       <a href="#stay">Stay</a>
       <a href="#gallery">Gallery</a>
       <a href="#dining">Dining</a>
@@ -166,6 +167,18 @@ footer a{color:var(--sand);text-decoration:none}
     <div>Reservations <span>+91 88298 09555</span></div>
   </div>
 </div>
+
+<section id="book-online" style="background:linear-gradient(180deg,var(--mist),var(--white));padding:56px 0 40px">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px">
+      <div class="kicker sans">Book direct · live availability</div>
+      <h2>Check dates &amp; rates now</h2>
+      <p>Real-time availability straight from our reservation system — the same rooms and rates as every travel site, with no middleman.</p>
+    </div>
+    <div id="asiatech-booking-mount" style="display:flex;justify-content:center"></div>
+    <p class="note sans" style="text-align:center;margin-top:18px">Prefer to talk? <a href="https://wa.me/918829809555?text=Hello%2C%20I%20would%20like%20to%20book%20a%20stay%20at%20The%20Udaisarovar" style="color:var(--jd-deep);font-weight:600">Book on WhatsApp</a> · <a href="tel:+918829809555" style="color:var(--jd-deep);font-weight:600">Call +91 88298 09555</a></p>
+  </div>
+</section>
 
 <section id="stay">
   <div class="wrap">
@@ -322,6 +335,27 @@ footer a{color:var(--sand);text-decoration:none}
     <div><a href="https://www.myjdgroup.com">JD Group</a> · <a href="https://wa.me/918829809555">Reservations</a></div>
   </div>
 </footer>
+
+<style id="asiatech-override">
+#widgetform{position:static !important;top:auto !important;right:auto !important;background:var(--white) !important;border:1px solid var(--line);border-radius:10px;padding:22px 26px;box-shadow:0 10px 30px rgba(11,42,52,.08);display:inline-block}
+#widgetform table{border:none !important}
+#widgetform thead tr:first-child td{background:var(--jd) !important;border-radius:6px 6px 0 0;letter-spacing:.04em}
+#widgetform input{font-size:1rem;height:42px}
+#pricecal td,#pricecal th{font-size:.9rem}
+</style>
+
+<div id="asiatech-widget-holder" style="display:none"><link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><style>td,th{padding:4px 1px;border-top:1px solid #ddd}tbody tr:nth-child(odd){background-color:#f9f9f9}input{background:url(https://asiatech.in/booking_engine/superadmin/images/calendar-icon.png) no-repeat 5px;padding-left:25px;border:1px solid #ccc}#widgetform{position: fixed;top: 25%;right: 10px;background: white;}</style><form class="form-inline" role="form" id="widgetform"><table cellpadding="0" cellspacing="0" style="border: 1px solid #dddddd; text-align: center;"><thead><tr style="background: #ef6f2d; color: white; font-size: 18px;"><td colspan="2">THE UDAISAROVAR RESORT LAKESIDE PARADISE</td></tr><tr><td><input type="hidden" name="token" value="3635656139323636636563303633663631303064653161633461326434383933"><input type="text" class="form-control" name="datepick" id="datepick" placeholder="Check In" style="width: 125px;"></td><td><input type="text" class="form-control" name="datepick1" id="datepick1" placeholder="Check Out" style="width: 125px;"></td></tr></thead><tbody id="pricecal"></tbody></table> <img id="loadingimg" style="display: block; float: left;" src="https://asiatech.in/booking_engine/superadmin/images/loader_small.gif"></form> <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <script>$(function(){var date=new Date(),tomorrow=new Date();tomorrow.setDate(tomorrow.getDate()+1);$("#datepick").datepicker({dateFormat:"dd-mm-yy",minDate:0,onSelect:function(){$("#pricecal").hide();$("#loadingimg").css('display','block');var b=$("#datepick").datepicker("getDate");b.setDate(b.getDate()+1);$("#datepick1").datepicker("setDate",b);$("#datepick1").datepicker("option","minDate",b);var senddata=$("#widgetform").serializeArray();ajax_request(senddata)}});$("#datepick1").datepicker({dateFormat:"dd-mm-yy",minDate:1,onClose:function(){$("#pricecal").hide();$("#loadingimg").css('display','block');var a=$("#datepick").datepicker("getDate"),b=$("#datepick1").datepicker("getDate");if(a>=b){var c=$("#datepick1").datepicker("option","minDate");$("#datepick1").datepicker("setDate",c)} var senddata=$("#widgetform").serializeArray();ajax_request(senddata)}});$("#datepick").datepicker("setDate",date);$("#datepick1").datepicker("setDate",tomorrow);var senddata=$("#widgetform").serializeArray();ajax_request(senddata);function ajax_request(senddata){$.ajax({url:"https://asiatech.in/booking_engine/admin/widget",type:"POST",data:senddata,dataType:"html",headers:{'Accept':'application/json'},success:function(data){$("#loadingimg").css('display','none');$("#pricecal").show().html(data)}})}})</script></div>
+<script>
+(function(){
+  function place(){
+    var holder=document.getElementById('asiatech-widget-holder');
+    var mount=document.getElementById('asiatech-booking-mount');
+    var form=document.getElementById('widgetform');
+    if(form&&mount){ mount.appendChild(form); holder.style.display='none'; }
+  }
+  if(document.readyState!=='loading') setTimeout(place,400); else document.addEventListener('DOMContentLoaded',function(){setTimeout(place,400);});
+})();
+</script>
 
 </body>
 </html>
