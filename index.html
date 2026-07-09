@@ -168,7 +168,7 @@ footer a{color:var(--sand);text-decoration:none}
   </div>
 </div>
 
-<section id="book-online" style="background:linear-gradient(180deg,var(--mist),var(--white));padding:56px 0 40px">
+<section id="book-online" style="background:radial-gradient(120% 90% at 50% 0%, rgba(30,95,110,.10), transparent), linear-gradient(180deg,var(--mist),var(--white));padding:64px 0 52px">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:26px">
       <div class="kicker sans">Book direct · live availability</div>
@@ -337,23 +337,108 @@ footer a{color:var(--sand);text-decoration:none}
 </footer>
 
 <style id="asiatech-override">
-#widgetform{position:static !important;top:auto !important;right:auto !important;background:var(--white) !important;border:1px solid var(--line);border-radius:10px;padding:22px 26px;box-shadow:0 10px 30px rgba(11,42,52,.08);display:inline-block}
-#widgetform table{border:none !important}
-#widgetform thead tr:first-child td{background:var(--jd) !important;border-radius:6px 6px 0 0;letter-spacing:.04em}
-#widgetform input{font-size:1rem;height:42px}
-#pricecal td,#pricecal th{font-size:.9rem}
+/* ===== Premium booking widget (overrides AsiaTech default) ===== */
+#asiatech-booking-mount{width:100%}
+#widgetform{position:static !important;top:auto !important;right:auto !important;background:var(--white) !important;
+  border:none !important;border-radius:18px;padding:0 !important;width:100%;max-width:480px;margin:0 auto;
+  box-shadow:0 24px 60px -18px rgba(11,42,52,.32), 0 2px 8px rgba(11,42,52,.06);overflow:hidden;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif !important}
+#widgetform table{border:none !important;width:100%;border-collapse:collapse}
+#widgetform td,#widgetform th{border:none !important;padding:0}
+
+/* Header bar */
+#widgetform thead tr:first-child td{
+  background:linear-gradient(135deg,var(--deep),var(--lake) 55%,var(--teal)) !important;color:var(--mist) !important;
+  font-size:.82rem !important;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:20px 22px 16px !important;text-align:center;position:relative;line-height:1.5}
+#widgetform thead tr:first-child td::after{content:"◆ Best rate, guaranteed — book direct";display:block;
+  font-size:.62rem;font-weight:600;letter-spacing:.12em;color:var(--jd-soft);margin-top:7px;text-transform:uppercase}
+
+/* Date row */
+#widgetform thead tr:nth-child(2){display:flex;gap:14px;padding:20px 22px 6px;background:var(--white)}
+#widgetform thead tr:nth-child(2) td{flex:1;display:flex;flex-direction:column}
+#widgetform thead tr:nth-child(2) td::before{content:"Check-in";font-size:.62rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:6px;text-align:left}
+#widgetform thead tr:nth-child(2) td:last-child::before{content:"Check-out"}
+#widgetform input#datepick,#widgetform input#datepick1{width:100% !important;height:52px;font-size:1.02rem;
+  border:1.5px solid var(--line) !important;border-radius:10px;background:var(--mist) url(https://asiatech.in/booking_engine/superadmin/images/calendar-icon.png) no-repeat 12px center !important;
+  padding-left:40px !important;color:var(--ink);cursor:pointer;transition:border-color .15s,box-shadow .15s;font-weight:600}
+#widgetform input#datepick:focus,#widgetform input#datepick1:focus{outline:none;border-color:var(--jd) !important;box-shadow:0 0 0 3px rgba(226,105,31,.15)}
+
+/* Price comparison table */
+#pricecal{display:table;width:100%;padding:14px 22px 0}
+#pricecal tr{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-radius:9px;margin-bottom:2px}
+#pricecal tr td{font-size:.95rem}
+#pricecal tr td:first-child{text-align:left;letter-spacing:.02em}
+#pricecal tr td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+#pricecal tr.otarow td{color:var(--muted);font-weight:500}
+#pricecal tr.otarow td:first-child{text-transform:capitalize;font-size:.86rem;letter-spacing:.03em}
+#pricecal tr.otarow td:last-child{color:#8a9a99;text-decoration:line-through;text-decoration-color:rgba(138,154,153,.5);font-size:.88rem}
+#pricecal tr.officialrow{background:linear-gradient(135deg,#1e7a55,#2e7482) !important;color:#fff !important;
+  padding:15px 16px;margin:6px 0 4px;box-shadow:0 8px 20px -8px rgba(30,122,85,.6)}
+#pricecal tr.officialrow td{color:#fff !important;font-weight:700}
+#pricecal tr.officialrow td:first-child{font-size:.92rem;letter-spacing:.03em;display:flex;align-items:center;gap:8px}
+#pricecal tr.officialrow td:first-child::before{content:"★";color:var(--sand);font-size:1rem}
+#pricecal tr.officialrow td:last-child{font-size:1.35rem;letter-spacing:-.01em}
+#pricecal .save-badge{display:inline-block;background:var(--sand);color:var(--deep);font-size:.6rem;font-weight:800;
+  letter-spacing:.08em;padding:3px 8px;border-radius:20px;margin-left:2px;vertical-align:2px;white-space:nowrap}
+#pricecal tr.gstnote{justify-content:center;padding:8px 0 2px}
+#pricecal tr.gstnote td{font-size:.7rem !important;color:var(--muted);letter-spacing:.04em}
+#pricecal tr.bookrow{padding:14px 22px 10px;display:block}
+#pricecal tr.bookrow td{display:block}
+#pricecal tr.bookrow a.btn,#pricecal tr.bookrow a.btn-primary{display:block !important;width:100%;box-sizing:border-box;
+  background:linear-gradient(135deg,var(--jd),var(--jd-deep)) !important;color:#fff !important;border:none !important;
+  padding:16px !important;border-radius:11px;font-size:.92rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 12px 26px -10px rgba(226,105,31,.7);transition:transform .12s,box-shadow .12s}
+#pricecal tr.bookrow a.btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(226,105,31,.8)}
+#pricecal tr.poweredrow{justify-content:center;padding:2px 0 16px}
+#pricecal tr.poweredrow td a{color:var(--dim) !important;font-size:.64rem;text-decoration:none;letter-spacing:.06em;opacity:.7}
+#loadingimg{margin:20px auto;float:none !important}
+@media(max-width:520px){#widgetform thead tr:nth-child(2){flex-direction:column}}
 </style>
 
 <div id="asiatech-widget-holder" style="display:none"><link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><style>td,th{padding:4px 1px;border-top:1px solid #ddd}tbody tr:nth-child(odd){background-color:#f9f9f9}input{background:url(https://asiatech.in/booking_engine/superadmin/images/calendar-icon.png) no-repeat 5px;padding-left:25px;border:1px solid #ccc}#widgetform{position: fixed;top: 25%;right: 10px;background: white;}</style><form class="form-inline" role="form" id="widgetform"><table cellpadding="0" cellspacing="0" style="border: 1px solid #dddddd; text-align: center;"><thead><tr style="background: #ef6f2d; color: white; font-size: 18px;"><td colspan="2">THE UDAISAROVAR RESORT LAKESIDE PARADISE</td></tr><tr><td><input type="hidden" name="token" value="3635656139323636636563303633663631303064653161633461326434383933"><input type="text" class="form-control" name="datepick" id="datepick" placeholder="Check In" style="width: 125px;"></td><td><input type="text" class="form-control" name="datepick1" id="datepick1" placeholder="Check Out" style="width: 125px;"></td></tr></thead><tbody id="pricecal"></tbody></table> <img id="loadingimg" style="display: block; float: left;" src="https://asiatech.in/booking_engine/superadmin/images/loader_small.gif"></form> <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <script>$(function(){var date=new Date(),tomorrow=new Date();tomorrow.setDate(tomorrow.getDate()+1);$("#datepick").datepicker({dateFormat:"dd-mm-yy",minDate:0,onSelect:function(){$("#pricecal").hide();$("#loadingimg").css('display','block');var b=$("#datepick").datepicker("getDate");b.setDate(b.getDate()+1);$("#datepick1").datepicker("setDate",b);$("#datepick1").datepicker("option","minDate",b);var senddata=$("#widgetform").serializeArray();ajax_request(senddata)}});$("#datepick1").datepicker({dateFormat:"dd-mm-yy",minDate:1,onClose:function(){$("#pricecal").hide();$("#loadingimg").css('display','block');var a=$("#datepick").datepicker("getDate"),b=$("#datepick1").datepicker("getDate");if(a>=b){var c=$("#datepick1").datepicker("option","minDate");$("#datepick1").datepicker("setDate",c)} var senddata=$("#widgetform").serializeArray();ajax_request(senddata)}});$("#datepick").datepicker("setDate",date);$("#datepick1").datepicker("setDate",tomorrow);var senddata=$("#widgetform").serializeArray();ajax_request(senddata);function ajax_request(senddata){$.ajax({url:"https://asiatech.in/booking_engine/admin/widget",type:"POST",data:senddata,dataType:"html",headers:{'Accept':'application/json'},success:function(data){$("#loadingimg").css('display','none');$("#pricecal").show().html(data)}})}})</script></div>
 <script>
 (function(){
+  function enhance(){
+    var pc=document.getElementById('pricecal'); if(!pc) return;
+    var ota=[];
+    [].forEach.call(pc.querySelectorAll('tr'),function(r){
+      var c=r.cells;
+      if(c.length===2){
+        var name=(c[0].textContent||'').trim();
+        var price=parseFloat((c[1].textContent||'').replace(/[^\d.]/g,''));
+        if(/official/i.test(name)){ r.className='officialrow'; r.setAttribute('data-p',price||0); }
+        else { r.className='otarow'; if(price>0) ota.push(price); }
+      } else if(c.length===1){
+        if(r.querySelector('a.btn,a.btn-primary')) r.className='bookrow';
+        else if(/gst/i.test(c[0].textContent||'')) r.className='gstnote';
+        else r.className='poweredrow';
+      }
+    });
+    var off=pc.querySelector('.officialrow');
+    if(off && ota.length && !off.querySelector('.save-badge')){
+      var save=Math.round(Math.min.apply(null,ota)-parseFloat(off.getAttribute('data-p')||'0'));
+      if(save>0){
+        var b=document.createElement('span'); b.className='save-badge';
+        b.textContent='SAVE ₹'+save.toLocaleString('en-IN');
+        off.cells[0].appendChild(b);
+      }
+    }
+  }
   function place(){
     var holder=document.getElementById('asiatech-widget-holder');
     var mount=document.getElementById('asiatech-booking-mount');
     var form=document.getElementById('widgetform');
-    if(form&&mount){ mount.appendChild(form); holder.style.display='none'; }
+    if(form&&mount){ mount.appendChild(form); if(holder) holder.style.display='none'; }
+    var pc=document.getElementById('pricecal');
+    if(pc){
+      enhance();
+      // re-style each time AsiaTech refreshes the rate table (date change)
+      new MutationObserver(function(){ setTimeout(enhance,20); }).observe(pc,{childList:true});
+    }
   }
-  if(document.readyState!=='loading') setTimeout(place,400); else document.addEventListener('DOMContentLoaded',function(){setTimeout(place,400);});
+  if(document.readyState!=='loading') setTimeout(place,600); else document.addEventListener('DOMContentLoaded',function(){setTimeout(place,600);});
 })();
 </script>
 
