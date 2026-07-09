@@ -22,7 +22,7 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/logo.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["Hotel","Resort","LodgingBusiness"],"name":"The Udaisarovar - Lakeside Paradise","description":"Lakeside hotel and resort in Udaipur offering lake-view cottages, a private full-villa buyout, an infinity pool, lakeside camping and home-cooked Rajasthani meals at reasonable rates.","url":"https://www.theudaisarovar.com","image":"https://www.theudaisarovar.com/assets/hero.jpg","telephone":"+918829809555","priceRange":"₹₹","currenciesAccepted":"INR","address":{"@type":"PostalAddress","streetAddress":"Naglaphala, Lakadwas","addressLocality":"Udaipur","addressRegion":"Rajasthan","postalCode":"313003","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":24.5604582,"longitude":73.8056938},"hasMap":"https://maps.google.com/?q=The+Udaisarovar+Resort+Lakadwas+Udaipur","starRating":{"@type":"Rating","ratingValue":"4"},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Lake view","value":true},{"@type":"LocationFeatureSpecification","name":"Infinity pool","value":true},{"@type":"LocationFeatureSpecification","name":"Private cottages","value":true},{"@type":"LocationFeatureSpecification","name":"Full villa buyout","value":true},{"@type":"LocationFeatureSpecification","name":"Lakeside camping","value":true},{"@type":"LocationFeatureSpecification","name":"Free parking","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant","value":true},{"@type":"LocationFeatureSpecification","name":"Event garden","value":true}],"makesOffer":[{"@type":"Offer","name":"Lake-view Cottage","priceCurrency":"INR","price":"3000"},{"@type":"Offer","name":"Full Villa Buyout","priceCurrency":"INR","price":"18000"}],"parentOrganization":{"@type":"Organization","name":"JD Group of Companies","url":"https://www.myjdgroup.com"}}
+{"@context":"https://schema.org","@type":["Hotel","Resort","LodgingBusiness"],"name":"The Udaisarovar - Lakeside Paradise","description":"Lakeside hotel and resort in Udaipur offering lake-view cottages, a private full-villa buyout, an infinity pool, lakeside camping and home-cooked Rajasthani meals at reasonable rates.","url":"https://www.theudaisarovar.com","sameAs":["https://www.instagram.com/theudaisarovarudaipur/"],"image":"https://www.theudaisarovar.com/assets/hero.jpg","telephone":"+918829809555","priceRange":"₹₹","currenciesAccepted":"INR","address":{"@type":"PostalAddress","streetAddress":"Naglaphala, Lakadwas","addressLocality":"Udaipur","addressRegion":"Rajasthan","postalCode":"313003","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":24.5604582,"longitude":73.8056938},"hasMap":"https://maps.google.com/?q=The+Udaisarovar+Resort+Lakadwas+Udaipur","starRating":{"@type":"Rating","ratingValue":"4"},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Lake view","value":true},{"@type":"LocationFeatureSpecification","name":"Infinity pool","value":true},{"@type":"LocationFeatureSpecification","name":"Private cottages","value":true},{"@type":"LocationFeatureSpecification","name":"Full villa buyout","value":true},{"@type":"LocationFeatureSpecification","name":"Lakeside camping","value":true},{"@type":"LocationFeatureSpecification","name":"Free parking","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant","value":true},{"@type":"LocationFeatureSpecification","name":"Event garden","value":true}],"makesOffer":[{"@type":"Offer","name":"Lake-view Cottage","priceCurrency":"INR","price":"3000"},{"@type":"Offer","name":"Full Villa Buyout","priceCurrency":"INR","price":"18000"}],"parentOrganization":{"@type":"Organization","name":"JD Group of Companies","url":"https://www.myjdgroup.com"}}
 </script>
 <style>
 :root{
@@ -52,7 +52,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .nav-links a:hover{color:var(--sand)}
 .nav-links .book{background:var(--jd);color:#fff;padding:9px 18px;border-radius:3px}
 .nav-links .book:hover{background:var(--jd-deep);color:#fff}
-@media(max-width:760px){.nav-links a:not(.book){display:none}}
+@media(max-width:760px){.nav-links a:not(.book):not([aria-label="Instagram"]){display:none}}
 /* HERO */
 .hero{background:
   linear-gradient(180deg, rgba(11,42,52,.72) 0%, rgba(18,63,77,.55) 55%, rgba(11,42,52,.78) 100%),
@@ -152,6 +152,7 @@ footer a{color:var(--sand);text-decoration:none}
       <a href="#dining">Dining</a>
       <a href="#events">Celebrations</a>
       <a href="#contact">Contact</a>
+      <a href="https://www.instagram.com/theudaisarovarudaipur/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
       <a class="book" href="https://wa.me/918829809555?text=Hello%2C%20I%20would%20like%20to%20book%20a%20stay%20at%20The%20Udaisarovar">Book Now</a>
     </div>
   </div>
@@ -352,8 +353,23 @@ footer a{color:var(--sand);text-decoration:none}
       <div class="cc"><span class="tag sans">WhatsApp &amp; calls</span><a href="https://wa.me/918829809555">+91 88298 09555</a></div>
       <div class="cc"><span class="tag sans">Location</span><a href="https://maps.google.com/?q=The+Udaisarovar+Resort+Lakadwas+Udaipur" target="_blank" rel="noopener">Lakadwas, Udaipur 313003</a></div>
       <div class="cc"><span class="tag sans">Travel agents</span><a href="https://wa.me/918829809555?text=B2B%20partnership%20enquiry">B2B rates available</a></div>
+      <div class="cc"><span class="tag sans">Instagram</span><a href="https://www.instagram.com/theudaisarovarudaipur/" target="_blank" rel="noopener">@theudaisarovarudaipur</a></div>
       <div class="cc"><span class="tag sans">Part of</span><a href="https://www.myjdgroup.com" target="_blank" rel="noopener">JD Group of Companies</a></div>
     </div>
+  </div>
+</section>
+
+<section id="instagram" class="alt" style="text-align:center">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px">
+      <div class="kicker sans">Follow the lake life</div>
+      <h2>@theudaisarovarudaipur</h2>
+      <p>Sunsets, bonfires and cottage mornings — see the latest from the lakeside on Instagram.</p>
+    </div>
+    <a class="btn btn-sand sans" href="https://www.instagram.com/theudaisarovarudaipur/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg>
+      Follow on Instagram
+    </a>
   </div>
 </section>
 
@@ -362,7 +378,7 @@ footer a{color:var(--sand);text-decoration:none}
 <footer class="sans">
   <div class="wrap">
     <div>© 2026 The Udaisarovar — Lakeside Paradise · Udaipur</div>
-    <div><a href="https://www.myjdgroup.com">JD Group</a> · <a href="https://wa.me/918829809555">Reservations</a></div>
+    <div><a href="https://www.instagram.com/theudaisarovarudaipur/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.myjdgroup.com">JD Group</a> · <a href="https://wa.me/918829809555">Reservations</a></div>
   </div>
 </footer>
 
