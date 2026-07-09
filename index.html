@@ -108,11 +108,18 @@ section{padding:88px 0}
 .dine-row:last-child{border:none}
 .dine-row b{color:var(--sand);font-weight:400}
 /* EVENTS */
-.ev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.ev{border:1px solid var(--line);border-left:4px solid var(--jd);background:var(--white);padding:26px;border-radius:4px}
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.ev{border:1px solid var(--line);border-left:4px solid var(--jd);background:var(--white);border-radius:4px;overflow:hidden}
+.ev img{width:100%;height:185px;object-fit:cover;display:block}
+.ev .ev-body{padding:24px 26px}
 .ev h3{color:var(--lake);font-size:1.1rem;font-weight:600;margin-bottom:6px}
 .ev p{font-size:.9rem;color:var(--muted)}
 .ev .price{color:var(--teal);font-size:.95rem;margin-top:10px;display:block}
+/* WEDDING BANNER */
+.wed-banner{position:relative;min-height:460px;background:linear-gradient(180deg,rgba(11,42,52,.3),rgba(11,42,52,.7)),url("assets/wedding-stage.jpg") center 40%/cover no-repeat;display:flex;align-items:flex-end}
+.wed-banner .wrap{padding-bottom:56px;color:var(--mist)}
+.wed-banner h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400}
+.wed-banner p{max-width:540px;color:#dce8e6;margin:10px 0 24px}
 /* CTA */
 .cta{background:linear-gradient(160deg,var(--deep),var(--lake));color:var(--mist);text-align:center}
 .cta h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:400}
@@ -177,7 +184,7 @@ footer a{color:var(--sand);text-decoration:none}
       <div class="stay">
         <div class="visual v-cottage"><h3>Lake-view Cottage</h3></div>
         <div class="body">
-          <p>Your own cottage by the water — ideal for couples and small families. Wake to birdsong, sleep to crickets and still water.</p>
+          <p>Four luxury cottages and a spacious family room by the water — ideal for couples and small families. Wake to birdsong, sleep to crickets and still water.</p>
           <table class="rate-table">
             <tr><td>Weekday · room only</td><td>₹3,000</td></tr>
             <tr><td>Weekday · with breakfast</td><td>₹3,500</td></tr>
@@ -229,6 +236,9 @@ footer a{color:var(--sand);text-decoration:none}
       <figure><img src="assets/movienight.jpg" alt="Open-air movie night by the lake" loading="lazy"><figcaption>Cinema under the stars</figcaption></figure>
       <figure><img src="assets/lawn.jpg" alt="Lakeside lawns and tents at The Udaisarovar" loading="lazy"><figcaption>Lawns by the water</figcaption></figure>
       <figure><img src="assets/palms.jpg" alt="Lakeside camping tents under palm trees" loading="lazy"><figcaption>Camp under the palms</figcaption></figure>
+      <figure><img src="assets/brunch.jpg" alt="Garden brunch on the lakeside lawns at The Udaisarovar" loading="lazy"><figcaption>Garden brunches by the lake</figcaption></figure>
+      <figure><img src="assets/night-dining.jpg" alt="Open-air dinner by the lake at night" loading="lazy"><figcaption>Dinner under ambient lights</figcaption></figure>
+      <figure><img src="assets/wedding-couple.jpg" alt="Couple photoshoot in front of the cottages" loading="lazy"><figcaption>Made for your photos</figcaption></figure>
     </div>
   </div>
 </section>
@@ -251,6 +261,8 @@ footer a{color:var(--sand);text-decoration:none}
       <div class="exp"><div class="ico">🔥</div><h3>Bonfire nights</h3><p>Evenings around the fire under a sky full of stars.</p></div>
       <div class="exp"><div class="ico">🛶</div><h3>The lakefront</h3><p>Sunrise walks, birdwatching and chai by the water.</p></div>
       <div class="exp"><div class="ico">🍛</div><h3>Home-style food</h3><p>Rajasthani dal-baati, garden-fresh sabzi and hi-tea.</p></div>
+      <div class="exp"><div class="ico">🥂</div><h3>Garden brunches</h3><p>Slow mornings on the open lawns — fresh air, long tables, lake views.</p></div>
+      <div class="exp"><div class="ico">🚗</div><h3>Ample parking</h3><p>Extensive on-site parking — hassle-free arrivals for stays and events.</p></div>
       <div class="exp"><div class="ico">🏰</div><h3>Udaipur nearby</h3><p>City Palace, Fateh Sagar and old-city bazaars a short drive away.</p></div>
     </div>
   </div>
@@ -265,7 +277,7 @@ footer a{color:var(--sand);text-decoration:none}
     <div class="dine">
       <div>
         <img class="dine-photo" src="assets/dining.jpg" alt="Fresh food served lakeside at The Udaisarovar" loading="lazy">
-        <p>Our kitchen cooks the way Rajasthani homes do — fresh paneer, slow dals, hot chapatis and seasonal vegetables, with breakfast by the water and dinner under the stars. Meal plans can be added to any stay.</p>
+        <p>Our kitchen cooks the way Rajasthani homes do — fresh paneer, slow dals, hot chapatis and seasonal vegetables. Slow, unhurried dining in an elegant lakeside setting: garden brunches by day, dinner under the stars by night. Meal plans can be added to any stay.</p>
       </div>
       <div class="dine-rates sans">
         <h4>Per person</h4>
@@ -277,6 +289,15 @@ footer a{color:var(--sand);text-decoration:none}
   </div>
 </section>
 
+<section class="wed-banner" id="weddings">
+  <div class="wrap">
+    <div class="kicker sans" style="letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--jd-soft)">Weddings</div>
+    <h2>Say yes by the water</h2>
+    <p>From phere and engagements to pre-wedding functions and receptions — our team manages the complete setup, stage and décor to your vision, with the lake as your backdrop.</p>
+    <a class="btn btn-sand sans" href="https://wa.me/918829809555?text=Hello%2C%20I%20want%20to%20plan%20a%20wedding%20at%20The%20Udaisarovar">Plan your wedding</a>
+  </div>
+</section>
+
 <section class="alt" id="events">
   <div class="wrap">
     <div class="sec-head">
@@ -284,9 +305,10 @@ footer a{color:var(--sand);text-decoration:none}
       <h2>Your day, by the water</h2>
     </div>
     <div class="ev-grid">
-      <div class="ev"><h3>Phere &amp; weddings</h3><p>Garden ceremony with full décor and setup, lakeside backdrop, up to 150 guests.</p><span class="price sans">Full setup from ₹1,00,000 · with catering ₹1,50,000</span></div>
-      <div class="ev"><h3>Baby showers &amp; birthdays</h3><p>The whole villa to yourselves — décor, music and catering handled end to end.</p><span class="price sans">Ask for a package on WhatsApp</span></div>
-      <div class="ev"><h3>Corporate &amp; sundowners</h3><p>Offsites, pool parties and DJ nights with production by JD Production &amp; Entertainers.</p><span class="price sans">Guarded parking · power backup · event team</span></div>
+      <div class="ev"><img src="assets/mandap.jpg" alt="Wedding phere ceremony under a floral mandap at The Udaisarovar" loading="lazy"><div class="ev-body"><h3>Phere &amp; weddings</h3><p>Garden ceremony with full décor, stage and setup, lakeside backdrop, up to 150 guests.</p><span class="price sans">Full setup from ₹1,00,000 · with catering ₹1,50,000</span></div></div>
+      <div class="ev"><img src="assets/birthday.jpg" alt="Birthday décor with balloon arches at The Udaisarovar" loading="lazy"><div class="ev-body"><h3>Baby showers &amp; birthdays</h3><p>The whole villa to yourselves — décor, music and catering handled end to end.</p><span class="price sans">Ask for a package on WhatsApp</span></div></div>
+      <div class="ev"><img src="assets/holi.jpg" alt="Holi celebration on the lawns at The Udaisarovar" loading="lazy"><div class="ev-body"><h3>Holi &amp; day celebrations</h3><p>Open garden spaces for Holi parties, cultural events, brunch gatherings and family get-togethers.</p><span class="price sans">Ask for a day-event package</span></div></div>
+      <div class="ev"><img src="assets/dj-night.jpg" alt="DJ night with lighting by the lake at The Udaisarovar" loading="lazy"><div class="ev-body"><h3>DJ nights &amp; corporate</h3><p>Open-air DJ nights, sundowners and offsites under ambient lighting, with production by JD Production &amp; Entertainers.</p><span class="price sans">Guarded parking · power backup · event team</span></div></div>
     </div>
   </div>
 </section>
