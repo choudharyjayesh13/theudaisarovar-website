@@ -55,6 +55,13 @@ h3{font-weight:600;color:var(--navy);font-size:1.3rem;line-height:1.2}
 .lead{font-size:1.04rem;color:#333c4d;line-height:1.65;margin:14px 0 26px;max-width:760px}
 .note{font-size:.84rem;color:var(--mute);line-height:1.5}
 .sandbg{background:var(--sand)}
+@media(min-width:700px){.ac.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.ac.wide .ph{height:300px}.ac.wide .ph img{width:100%;height:100%;object-fit:cover}.ac.wide .tx{display:flex;flex-direction:column;justify-content:center}}
+.ytg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}@media(max-width:800px){.ytg{grid-template-columns:repeat(2,minmax(0,1fr))}.ytc.feat{grid-column:1/-1;max-width:360px;margin:0 auto;width:100%}}
+.ytc{margin:0}.yt{position:relative;display:block;width:100%;aspect-ratio:9/16;border:0;border-radius:16px;overflow:hidden;background:#0b1f3a center/cover no-repeat;cursor:pointer;box-shadow:0 10px 28px rgba(11,31,58,.18)}
+.yt .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(255,122,26,.95);color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;padding-left:5px}
+.yt .badge{position:absolute;left:12px;top:12px;background:var(--orange);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:5px 10px;border-radius:999px}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.ytc figcaption{margin-top:10px;font-size:.88rem;color:var(--mute)}.ytc figcaption b{display:block;color:var(--navy);font-size:1rem;margin-bottom:2px}
+
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.92rem;letter-spacing:.02em;transition:.2s;border:2px solid transparent;cursor:pointer}
 .btn-or{background:var(--orange);color:#fff}.btn-or:hover{background:var(--burnt)}
@@ -343,6 +350,7 @@ footer .managed{font-size:.8rem;margin-top:3px}
       <a class="hide-m" href="#dining">Dine</a>
       <a class="hide-m" href="#experiences">Experiences</a>
       <a class="hide-m" href="#events">Events</a>
+      <a class="hide-m" href="#videos">Videos</a>
       <a class="hide-m" href="#rates">Rates</a>
       <a class="hide-m" href="#contact">Contact</a>
       <a class="hide-s" href="https://app.myjdgroup.com/guest/">Guest App</a>
@@ -547,10 +555,10 @@ footer .managed{font-size:.8rem;margin-top:3px}
       <div class="ac"><figure class="ph"><img src="assets/camping.jpg" alt="Lakeside camping tents" loading="lazy" style="object-position:center 70%"></figure><div class="tx"><h4>Lakeside camping</h4><p>Tents on the shore with a bonfire night. Best October – March; group camps on request.</p><span class="pr">₹2,500 per tent incl. breakfast</span></div></div>
       <div class="ac"><figure class="ph"><img src="assets/bonfire.jpg" alt="Bonfire and music night" loading="lazy" style="object-position:center 55%"></figure><div class="tx"><h4>Bonfire &amp; music nights</h4><p>Gather round the fire on the lawn with music and the lake lights across the water.</p></div></div>
       <div class="ac"><figure class="ph"><img src="assets/movienight.jpg" alt="Open-air movie night by the lake" loading="lazy"></figure><div class="tx"><h4>Movie under the stars</h4><p>Open-air projector screening by the lake, <b>9 PM onward</b>.</p></div></div>
+      <div class="ac wide"><figure class="ph"><img src="assets/horse.jpg" alt="Our white horse on the lawns at The Udaisarovar" loading="lazy" style="object-position:center 55%"></figure><div class="tx"><h4>Horse riding</h4><p>Ride our white horse across the lakeside lawns with our riding partner. Price on request at reception. <a href="#videos" style="color:var(--burnt);font-weight:700">▶ Watch the video</a></p></div></div>
     </div>
     <div class="svc">
       <div><b>Games · 5–7 PM</b>Indoor &amp; outdoor: chess, ludo, badminton, football.</div>
-      <div><b>Horse riding</b>With a local riding partner – price on request.</div>
       <div><b>Airport / railway transfers</b>Pick-up &amp; drop on request.</div>
     </div>
     <div class="g lawnph">
@@ -559,6 +567,18 @@ footer .managed{font-size:.8rem;margin-top:3px}
     </div>
   </div>
 </section>
+
+<!-- ============ VIDEOS (YouTube Shorts) ============ -->
+<section id="videos">
+  <div class="wrap">
+    <div class="kicker">Watch</div>
+    <h2>The Udaisarovar on video</h2>
+    <p style="color:var(--mute);max-width:640px">Short films from our YouTube channel — tap to play.</p>
+    <div class="ytg"><figure class="ytc feat"><button class="yt" data-id="Kcbh99NyEVw" aria-label="Play video: Horse riding at The Udaisarovar" style="background-image:url(https://i.ytimg.com/vi/Kcbh99NyEVw/oar2.jpg)"><span class="play">▶</span><span class="badge">Featured · Horse riding</span></button><figcaption><b>Horse riding at The Udaisarovar</b>Our white horse on the lakeside lawns — ride with our riding partner during your stay.</figcaption></figure><figure class="ytc"><button class="yt" data-id="ow7yHuqjS2k" aria-label="Play video: A view too perfect to stop staring" style="background-image:url(https://i.ytimg.com/vi/ow7yHuqjS2k/oar2.jpg)"><span class="play">▶</span></button><figcaption><b>A view too perfect to stop staring</b>Udai Sagar lake and the Aravalli hills from the resort.</figcaption></figure><figure class="ytc"><button class="yt" data-id="t8eyQfAb8mA" aria-label="Play video: Welcome to The Udaisarovar" style="background-image:url(https://i.ytimg.com/vi/t8eyQfAb8mA/oar2.jpg)"><span class="play">▶</span></button><figcaption><b>Welcome to The Udaisarovar</b>A quick walk through the cottages, pool and lawns.</figcaption></figure></div>
+    <p style="margin-top:22px"><a class="btn btn-navy" href="https://www.youtube.com/channel/UCuA8AW9WiFMyuAGHxo6mR-A?sub_confirmation=1" target="_blank" rel="noopener">More on our YouTube channel</a></p>
+  </div>
+</section>
+<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.yt');if(!b||b.querySelector('iframe'))return;b.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0&playsinline=1&modestbranding=1" title="YouTube video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';});</script>
 
 <!-- ============ 6b SIGHTSEEING ============ -->
 <section id="sightseeing">
