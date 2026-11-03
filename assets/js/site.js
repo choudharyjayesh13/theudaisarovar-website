@@ -46,14 +46,78 @@
       '?autoplay=1&rel=0&playsinline=1&modestbranding=1" title="YouTube video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
   });
 
-  /* Gentle fade-in as sections scroll into view */
-  var els = document.querySelectorAll('.rv');
-  if ('IntersectionObserver' in window) {
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Hero film: load assets/video/hero.mp4 and fade it in once it plays (photo shows until then) */
+  var hv = document.querySelector('.hero-video');
+  if (hv) {
+    hv.style.opacity = '0'; hv.style.transition = 'opacity 1.2s ease';
+    if (!still && hv.dataset.src) {
+      hv.addEventListener('playing', function () { hv.style.opacity = '1'; });
+      hv.addEventListener('error', function () { hv.remove(); }, true);
+      hv.src = hv.dataset.src;
+      var pr = hv.play && hv.play(); if (pr && pr.catch) pr.catch(function () {});
+    } else { hv.remove(); }
+  }
+
+  /* Reveal: fade, slide-and-turn, and photo unveil as each block scrolls into view */
+  var els = document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-zoom');
+  if ('IntersectionObserver' in window && !still) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    els.forEach(function (el) { io.observe(el); });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(function (el, i) {
+      if (el.classList.contains('rv-l') || el.classList.contains('rv-r')) el.style.transitionDelay = ((i % 3) * 0.12) + 's';
+      io.observe(el);
+    });
   } else { els.forEach(function (el) { el.classList.add('in'); }); }
+
+  /* Count-up numbers */
+  document.querySelectorAll('[data-count]').forEach(function (el) {
+    if (still || !('IntersectionObserver' in window)) return;
+    var end = +el.dataset.count, done = false;
+    var o = new IntersectionObserver(function (en) {
+      if (!en[0].isIntersecting || done) return; done = true; o.disconnect();
+      var t0 = performance.now();
+      (function step(t) {
+        var k = Math.min(1, (t - t0) / 1600), v = Math.round(end * (1 - Math.pow(1 - k, 3)));
+        el.textContent = v.toLocaleString('en-IN'); if (k < 1) requestAnimationFrame(step);
+      })(t0);
+    });
+    o.observe(el);
+  });
+
+  /* Scroll-linked motion: hero drift, parallax insets, sideways photo reel */
+  if (!still) {
+    var heroMedia = document.querySelector('.hero .media'), heroIn = document.querySelector('.hero .in');
+    var pars = [].slice.call(document.querySelectorAll('[data-par]'));
+    var reels = [].slice.call(document.querySelectorAll('[data-reel]'));
+    var ticking = false;
+    var frame = function () {
+      ticking = false;
+      var y = window.scrollY, vh = window.innerHeight;
+      if (heroMedia && y < vh * 1.2) {
+        heroMedia.style.transform = 'scale(' + (1 + y / vh * 0.12) + ') translateY(' + (y * 0.25) + 'px)';
+        heroIn.style.transform = 'translateY(' + (y * -0.18) + 'px)';
+        heroIn.style.opacity = Math.max(0, 1 - y / (vh * 0.7));
+      }
+      pars.forEach(function (el) {
+        var r = el.getBoundingClientRect(); if (r.bottom < -200 || r.top > vh + 200) return;
+        var d = (r.top + r.height / 2 - vh / 2);
+        el.style.transform = 'translateY(' + (d * +el.dataset.par) + 'px)';
+      });
+      reels.forEach(function (tr) {
+        var sec = tr.parentNode.getBoundingClientRect(); if (sec.bottom < 0 || sec.top > vh) return;
+        var p = (vh - sec.top) / (vh + sec.height);
+        var max = Math.max(0, tr.scrollWidth - window.innerWidth + 40);
+        tr.style.transform = 'translateX(' + (-p * max + 20) + 'px)';
+      });
+    };
+    var req = function () { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+    window.addEventListener('scroll', req, { passive: true });
+    window.addEventListener('resize', req);
+    frame();
+  }
 
   /* Tonight's direct rate from our booking engine (JD One), shown where [data-t] rows exist */
   var rows = document.querySelectorAll('[data-t]');

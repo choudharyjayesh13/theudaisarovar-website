@@ -78,15 +78,19 @@
 
 <main id="top">
 <section class="hero" style="padding:0">
-  <picture>
-    <source media="(max-width:760px)" srcset="assets/goldenhour.jpg">
-    <img src="assets/pool-lake2.jpg" alt="Infinity pool on the shore of Udai Sagar lake at The Udaisarovar, Udaipur" style="object-position:center 55%">
-  </picture>
+  <div class="media">
+    <picture>
+      <source media="(max-width:760px)" srcset="assets/goldenhour.jpg">
+      <img src="assets/pool-lake2.jpg" alt="Infinity pool on the shore of Udai Sagar lake at The Udaisarovar, Udaipur" style="object-position:center 55%">
+    </picture>
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" data-src="assets/video/hero.mp4"></video>
+  </div>
   <div class="in">
     <span class="place">Lakadwas · Udaipur · Rajasthan</span>
     <h1>A private retreat on the shores of <em>Udai Sagar</em></h1>
     <p class="sub">Five cottages, an infinity pool that meets the lake and wide lawns, about twenty minutes from the City of Lakes.</p>
   </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
 </section>
 
 <div class="bookbar" id="book-online">
@@ -108,20 +112,35 @@
   </div>
   <div class="wrap">
     <div class="facts rv">
-      <div><b>5</b><span>Cottages &amp; suite</span></div>
+      <div><b data-count="5">5</b><span>Cottages &amp; suite</span></div>
       <div><b>20 min</b><span>From Udaipur city</span></div>
-      <div><b>21,556</b><span>Sq ft lakeside lawn</span></div>
+      <div><b data-count="21556">21,556</b><span>Sq ft lakeside lawn</span></div>
       <div><b>400–600</b><span>Guests for events</span></div>
     </div>
   </div>
 </section>
 
-<section class="band-sand" id="stay">
+
+<section class="band-sand" style="padding:96px 0 110px" aria-label="A day at the lake">
+  <div class="wrap center rv"><span class="label">A day at The Udaisarovar</span><h2>From sunrise to the last ember</h2></div>
+  <div class="reel" style="margin-top:56px"><div class="track" data-reel>
+    <figure><img src="assets/palms.jpg" alt="Morning by the palms" loading="lazy"><figcaption>Morning by the water</figcaption></figure>
+    <figure><img src="assets/pool.jpg" alt="Infinity pool" loading="lazy"><figcaption>A swim at the edge</figcaption></figure>
+    <figure><img src="assets/ev-brunch.jpg" alt="Brunch on the lawn" loading="lazy"><figcaption>Brunch on the lawn</figcaption></figure>
+    <figure><img src="assets/horse.jpg" alt="Horse on the lawn" loading="lazy"><figcaption>A ride across the lawns</figcaption></figure>
+    <figure><img src="assets/goldenhour.jpg" alt="Golden hour" loading="lazy"><figcaption>Golden hour</figcaption></figure>
+    <figure><img src="assets/cottage-earth.jpg" alt="Cottage at dusk" loading="lazy"><figcaption>Lights on at dusk</figcaption></figure>
+    <figure><img src="assets/bonfire.jpg" alt="Bonfire" loading="lazy"><figcaption>Stories by the fire</figcaption></figure>
+    <figure><img src="assets/movienight.jpg" alt="Movie night" loading="lazy"><figcaption>Cinema under the stars</figcaption></figure>
+  </div></div>
+</section>
+
+<section id="stay">
   <div class="wrap">
     <div class="split">
-      <div class="media rv">
+      <div class="media rv-zoom">
         <img src="assets/p-udaisarovar.jpg" alt="Wooden cottages on the lawn at The Udaisarovar" loading="lazy">
-        <img class="inset" src="assets/room.jpg" alt="Lake-view cottage bedroom" loading="lazy">
+        <img data-par="-0.10" class="inset" src="assets/room.jpg" alt="Lake-view cottage bedroom" loading="lazy">
       </div>
       <div class="text rv">
         <span class="label">Stay</span>
@@ -139,27 +158,27 @@
   </div>
 </section>
 
-<section id="experiences">
+<section class="band-sand" id="experiences">
   <div class="wrap">
     <div class="center rv">
       <span class="label">Experiences</span>
       <h2>Days by the pool, nights under the stars</h2>
     </div>
     <div class="tiles">
-      <a class="tile rv" href="experiences.html#pool"><img src="assets/pool.jpg" alt="Infinity pool meeting Udai Sagar lake" loading="lazy" style="object-position:center 70%"><span class="cap"><h3>Infinity pool</h3><p>The pool edge meets the lake.</p></span></a>
-      <a class="tile rv" href="experiences.html#camping"><img src="assets/camping.jpg" alt="Lakeside camping tents" loading="lazy" style="object-position:center 70%"><span class="cap"><h3>Lakeside camping</h3><p>Tents on the shore, bonfire and music.</p><span class="pr">₹3,000 per tent for two</span></span></a>
-      <a class="tile rv" href="experiences.html#bonfire"><img src="assets/bonfire.jpg" alt="Bonfire and music night" loading="lazy"><span class="cap"><h3>Bonfire nights</h3><p>Music on the lawn, lake lights across the water.</p></span></a>
-      <a class="tile rv" href="experiences.html#movies"><img src="assets/movienight.jpg" alt="Open-air movie night by the lake" loading="lazy"><span class="cap"><h3>Cinema under the stars</h3><p>Open-air screenings from 9 PM.</p></span></a>
-      <a class="tile rv" href="experiences.html#horse"><img src="assets/horse.jpg" alt="White horse on the lakeside lawns" loading="lazy" style="object-position:center 55%"><span class="cap"><h3>Horse riding</h3><p>Across the lakeside lawns.</p></span></a>
-      <a class="tile rv" href="experiences.html#sightseeing"><img src="assets/x-citypalace.jpg" alt="City Palace, Udaipur" loading="lazy"><span class="cap"><h3>Udaipur &amp; Mewar</h3><p>City tours, Nathdwara and Chittorgarh by cab.</p></span></a>
+      <a class="tile rv-l" href="experiences.html#pool"><img src="assets/pool.jpg" alt="Infinity pool meeting Udai Sagar lake" loading="lazy" style="object-position:center 70%"><span class="cap"><h3>Infinity pool</h3><p>The pool edge meets the lake.</p></span></a>
+      <a class="tile rv-r" href="experiences.html#camping"><img src="assets/camping.jpg" alt="Lakeside camping tents" loading="lazy" style="object-position:center 70%"><span class="cap"><h3>Lakeside camping</h3><p>Tents on the shore, bonfire and music.</p><span class="pr">₹3,000 per tent for two</span></span></a>
+      <a class="tile rv-l" href="experiences.html#bonfire"><img src="assets/bonfire.jpg" alt="Bonfire and music night" loading="lazy"><span class="cap"><h3>Bonfire nights</h3><p>Music on the lawn, lake lights across the water.</p></span></a>
+      <a class="tile rv-r" href="experiences.html#movies"><img src="assets/movienight.jpg" alt="Open-air movie night by the lake" loading="lazy"><span class="cap"><h3>Cinema under the stars</h3><p>Open-air screenings from 9 PM.</p></span></a>
+      <a class="tile rv-l" href="experiences.html#horse"><img src="assets/horse.jpg" alt="White horse on the lakeside lawns" loading="lazy" style="object-position:center 55%"><span class="cap"><h3>Horse riding</h3><p>Across the lakeside lawns.</p></span></a>
+      <a class="tile rv-r" href="experiences.html#sightseeing"><img src="assets/x-citypalace.jpg" alt="City Palace, Udaipur" loading="lazy"><span class="cap"><h3>Udaipur &amp; Mewar</h3><p>City tours, Nathdwara and Chittorgarh by cab.</p></span></a>
     </div>
   </div>
 </section>
 
-<section class="band-sand" id="dining">
+<section id="dining">
   <div class="wrap">
     <div class="split rev">
-      <div class="media tall rv">
+      <div class="media tall rv-zoom">
         <img src="assets/ev-dining.jpg" alt="Candle-lit lakeside dinner" loading="lazy">
       </div>
       <div class="text rv">
