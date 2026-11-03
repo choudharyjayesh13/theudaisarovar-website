@@ -389,3 +389,26 @@ details.more-rates[open] summary:after{content:"−"}
 .reel figcaption{font-family:var(--serif);font-size:1.25rem;color:var(--ink);margin-top:10px}
 @media(min-width:900px){.reel figure{width:360px}}
 @media(prefers-reduced-motion:reduce){.rv-l,.rv-r{opacity:1;transform:none;transition:none}.rv-zoom img{clip-path:none;transform:none;transition:none}}
+
+/* ---------- brand loader: logo blooms inside a turning ring of gold dots ---------- */
+.loader{position:fixed;inset:0;z-index:200;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .8s ease,visibility .8s}
+.loader.done{opacity:0;visibility:hidden}
+.bloom{position:relative;width:132px;height:132px}
+.bloom img{position:absolute;inset:22px;width:88px;height:88px;border-radius:50%;object-fit:cover;animation:bloom 1.6s cubic-bezier(.2,.8,.2,1) both}
+.bloom .ring{position:absolute;inset:0;animation:turn 2.4s linear infinite}
+.bloom .ring i{position:absolute;left:50%;top:0;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--gold);transform-origin:3.5px 66px;opacity:.25}
+.bloom .ring i:nth-child(1){transform:rotate(0deg);opacity:1}.bloom .ring i:nth-child(2){transform:rotate(45deg);opacity:.85}
+.bloom .ring i:nth-child(3){transform:rotate(90deg);opacity:.7}.bloom .ring i:nth-child(4){transform:rotate(135deg);opacity:.55}
+.bloom .ring i:nth-child(5){transform:rotate(180deg);opacity:.42}.bloom .ring i:nth-child(6){transform:rotate(225deg);opacity:.32}
+.bloom .ring i:nth-child(7){transform:rotate(270deg);opacity:.24}.bloom .ring i:nth-child(8){transform:rotate(315deg);opacity:.18}
+.loader .word{font-family:var(--serif);font-size:1.15rem;letter-spacing:.32em;color:var(--ink);opacity:0;animation:fadein 1s .5s forwards}
+.loader .word small{display:block;text-align:center;font-family:var(--sans);font-size:.58rem;letter-spacing:.4em;color:var(--brass-d);margin-top:8px}
+@keyframes bloom{0%{transform:scale(.2) rotate(-90deg);opacity:0;clip-path:circle(10% at 50% 50%)}60%{opacity:1}100%{transform:none;opacity:1;clip-path:circle(50% at 50% 50%)}}
+@keyframes turn{to{transform:rotate(360deg)}}
+@keyframes fadein{to{opacity:1}}
+/* small version over a loading video */
+.hero .vload{position:absolute;right:28px;bottom:28px;z-index:3;width:56px;height:56px;transition:opacity .6s}
+.hero .vload .bloom{width:56px;height:56px}.hero .vload .bloom img{inset:10px;width:36px;height:36px}
+.hero .vload .ring i{width:4px;height:4px;margin-left:-2px;transform-origin:2px 28px}
+.hero .vload.done{opacity:0}
+@media(prefers-reduced-motion:reduce){.bloom .ring,.bloom img{animation:none}}

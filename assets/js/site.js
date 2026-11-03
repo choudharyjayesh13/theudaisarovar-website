@@ -1,5 +1,13 @@
 /* The Udaisarovar — site behaviour */
 (function () {
+  /* Brand loader: hide once the page has loaded (and never wait more than 4 s) */
+  var ld = document.querySelector('.loader');
+  if (ld) {
+    var hide = function () { ld.classList.add('done'); };
+    window.addEventListener('load', function () { setTimeout(hide, 600); });
+    setTimeout(hide, 4000);
+  }
+
   var head = document.querySelector('.site-head');
 
   /* Header turns solid once you scroll past the top of the home hero */
@@ -53,11 +61,12 @@
   if (hv) {
     hv.style.opacity = '0'; hv.style.transition = 'opacity 1.2s ease';
     if (!still && hv.dataset.src) {
-      hv.addEventListener('playing', function () { hv.style.opacity = '1'; });
-      hv.addEventListener('error', function () { hv.remove(); }, true);
+      hv.addEventListener('playing', function () { hv.style.opacity = '1'; var vl = document.querySelector('.vload'); if (vl) vl.classList.add('done'); });
+      hv.addEventListener('error', function () { hv.remove(); var vl = document.querySelector('.vload'); if (vl) vl.remove(); }, true);
       hv.src = hv.dataset.src;
       var pr = hv.play && hv.play(); if (pr && pr.catch) pr.catch(function () {});
     } else { hv.remove(); }
+    if (!hv.dataset.src || still) { var vl0 = document.querySelector('.vload'); if (vl0) vl0.remove(); }
   }
 
   /* Reveal: fade, slide-and-turn, and photo unveil as each block scrolls into view */
