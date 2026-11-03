@@ -460,3 +460,22 @@ details.more-rates[open] summary:after{content:"−"}
 .topline a{color:var(--jd-ink);border-bottom-color:rgba(43,29,8,.5)}
 .topline b{color:var(--jd-ink);font-weight:600}
 .site-head.over .nav-r .btn{background:var(--jd-gold);background-size:200% 100%;color:var(--jd-ink);border-color:transparent;font-weight:500}
+/* ---------- phone fixes: nothing may push the page sideways ---------- */
+html,body{overflow-x:hidden;max-width:100%}
+main,section,.site-foot,.hero,.feature{overflow-x:clip}
+@media(max-width:760px){
+  .rv-l,.rv-r{transform:translateY(24px)}          /* simple fade-up on phones, no sideways tilt */
+  .rv-l.in,.rv-r.in{transform:none}
+  .rv-zoom img{clip-path:inset(6% 6% 6% 6%);transform:scale(1.08)}
+  .site-head .bar{padding:0 14px;gap:8px;grid-template-columns:44px 1fr 44px}
+  .brand{min-width:0}
+  .brand .n{font-size:1.02rem;letter-spacing:.09em}
+  .brand .t{font-size:.5rem;letter-spacing:.2em}
+  .brand .lotus{width:40px}
+  .m-book{font-size:.66rem;letter-spacing:.12em;justify-self:end}
+}
+@media(max-width:360px){.brand .n{font-size:.92rem;letter-spacing:.06em}.brand .t{letter-spacing:.14em}}
+.packs{grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.packs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:420px){.btn{padding:0 18px;letter-spacing:.14em;white-space:normal;text-align:center}.pack{padding:40px 24px}}
+#instagram h2{overflow-wrap:anywhere;font-size:clamp(1.6rem,6vw,3.5rem)}
