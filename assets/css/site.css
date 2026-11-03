@@ -442,3 +442,6 @@ details.more-rates[open] summary:after{content:"−"}
 .hero h1{font-size:clamp(2.4rem,min(6.4vw,8.5vh),5.4rem)}
 .hero .sub{margin-top:min(22px,2.5vh)}
 @media(max-height:760px) and (min-width:900px){.hero .in{padding-bottom:140px}}
+/* header brand: lotus, name and tagline on three clean lines */
+.brand .n{display:block;line-height:1.1}
+.brand .t{display:block;margin-top:7px;line-height:1.3}
