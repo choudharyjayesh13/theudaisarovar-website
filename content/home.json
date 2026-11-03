@@ -10,7 +10,7 @@
     "title": "A private retreat on the shores of",
     "title_italic": "Udai Sagar",
     "subtitle": "Five cottages, an infinity pool that meets the lake and wide lawns, about twenty minutes from the City of Lakes.",
-    "rooms_from": "₹4,500"
+    "rooms_from": "₹9500"
   },
   "welcome": {
     "label": "Welcome to The Udaisarovar",
@@ -88,7 +88,6 @@
         "image": "/assets/pool.jpg",
         "title": "Infinity pool",
         "text": "The pool edge meets the lake.",
-        "price": "",
         "link": "experiences.html#pool"
       },
       {
@@ -102,28 +101,24 @@
         "image": "/assets/bonfire.jpg",
         "title": "Bonfire nights",
         "text": "Music on the lawn, lake lights across the water.",
-        "price": "",
         "link": "experiences.html#bonfire"
       },
       {
         "image": "/assets/movienight.jpg",
         "title": "Cinema under the stars",
         "text": "Open-air screenings from 9 PM.",
-        "price": "",
         "link": "experiences.html#movies"
       },
       {
         "image": "/assets/horse.jpg",
         "title": "Horse riding",
         "text": "Across the lakeside lawns.",
-        "price": "",
         "link": "experiences.html#horse"
       },
       {
         "image": "/assets/x-citypalace.jpg",
         "title": "Udaipur & Mewar",
         "text": "City tours, Nathdwara and Chittorgarh by cab.",
-        "price": "",
         "link": "experiences.html#sightseeing"
       }
     ]
