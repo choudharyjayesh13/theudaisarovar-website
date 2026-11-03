@@ -445,3 +445,5 @@ details.more-rates[open] summary:after{content:"−"}
 /* header brand: lotus, name and tagline on three clean lines */
 .brand .n{display:block;line-height:1.1}
 .brand .t{display:block;margin-top:7px;line-height:1.3}
+@media(min-width:900px){.site-head .bar{height:122px}}
+.site-head.over.solid .brand .lotus{filter:none}

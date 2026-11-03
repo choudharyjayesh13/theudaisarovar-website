@@ -12,9 +12,16 @@
 
   /* Header turns solid once you scroll past the top of the home hero */
   if (head && head.classList.contains('over')) {
-    var onScroll = function () { head.classList.toggle('solid', window.scrollY > 40); };
+    var tl = document.querySelector('.topline');
+    var onScroll = function () {
+      var y = window.scrollY, off = tl ? tl.offsetHeight : 0;
+      /* sits under the offer strip at first, then locks to the very top of the screen */
+      head.style.top = Math.max(0, off - y) + 'px';
+      head.classList.toggle('solid', y > 40);
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
   }
 
   /* Mobile menu */
