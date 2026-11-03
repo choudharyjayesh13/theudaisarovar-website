@@ -60,13 +60,14 @@
   var hv = document.querySelector('.hero-video');
   if (hv) {
     hv.style.opacity = '0'; hv.style.transition = 'opacity 1.2s ease';
-    if (!still && hv.dataset.src) {
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (!still && !saveData && hv.dataset.src) {
       hv.addEventListener('playing', function () { hv.style.opacity = '1'; var vl = document.querySelector('.vload'); if (vl) vl.classList.add('done'); });
       hv.addEventListener('error', function () { hv.remove(); var vl = document.querySelector('.vload'); if (vl) vl.remove(); }, true);
       hv.src = hv.dataset.src;
       var pr = hv.play && hv.play(); if (pr && pr.catch) pr.catch(function () {});
     } else { hv.remove(); }
-    if (!hv.dataset.src || still) { var vl0 = document.querySelector('.vload'); if (vl0) vl0.remove(); }
+    if (!hv.dataset.src || still || saveData) { var vl0 = document.querySelector('.vload'); if (vl0) vl0.remove(); }
   }
 
   /* Reveal: fade, slide-and-turn, and photo unveil as each block scrolls into view */
