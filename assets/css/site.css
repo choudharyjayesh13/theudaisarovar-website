@@ -412,3 +412,26 @@ details.more-rates[open] summary:after{content:"−"}
 .hero .vload .ring i{width:4px;height:4px;margin-left:-2px;transform-origin:2px 28px}
 .hero .vload.done{opacity:0}
 @media(prefers-reduced-motion:reduce){.bloom .ring,.bloom img{animation:none}}
+
+/* ---------- JD Stays & Hospitality branding ---------- */
+.brand .lotus{width:46px;height:auto;margin-bottom:6px}
+@media(min-width:900px){.brand .lotus{width:54px}.site-head .bar{height:118px}}
+.site-head .bar{height:100px}
+.site-head.over .brand .lotus{filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
+.drawer .brand .lotus{width:44px;margin-bottom:6px}
+.site-foot .jd-logo{width:240px;height:auto;display:block}
+.site-foot .logo b{font-size:1.25rem}
+/* loader: the lotus blooms upward out of its base, gold dots turning around it */
+.bloom{width:170px;height:170px}
+.bloom img{inset:auto;left:50%;top:50%;width:104px;height:auto;border-radius:0;object-fit:contain;transform-origin:50% 100%;
+  margin:-34px 0 0 -52px;animation:lotus 1.8s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 6px 18px rgba(184,146,74,.35))}
+.bloom .ring i{transform-origin:3.5px 85px}
+.loader .word{letter-spacing:.24em;font-size:1.05rem}
+@keyframes lotus{0%{opacity:0;transform:scale(.35,.1);clip-path:inset(100% 0 0 0)}40%{opacity:1}70%{transform:scale(1.04,1.04)}100%{opacity:1;transform:none;clip-path:inset(0 0 0 0)}}
+.hero .vload .bloom img{width:34px;margin:-11px 0 0 -17px}
+.site-head.over:not(.solid) .brand .t{color:#fff;opacity:.92}
+.site-head .brand .t{font-size:.62rem;letter-spacing:.3em;font-weight:500}
+@media(min-width:900px){.brand .lotus{width:64px}.site-head .brand .t{font-size:.66rem}}
+.hero .place{color:#fff;font-size:.82rem;letter-spacing:.38em;font-weight:500}
+.hero .place:before,.hero .place:after{content:"";display:inline-block;width:40px;height:1px;background:var(--brass);vertical-align:middle;margin:0 16px}
+@media(max-width:600px){.hero .place:before,.hero .place:after{width:18px;margin:0 8px}.hero .place{letter-spacing:.24em;font-size:.7rem}}
