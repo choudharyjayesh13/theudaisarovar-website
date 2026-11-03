@@ -4,9 +4,9 @@
   "text": "Per cottage for two guests. Available only when you book directly with us by phone or WhatsApp, not on the online booking engine or travel sites.",
   "packages": [
     {
-      "tag": "Stay",
+      "tag": "Stay and Relax ",
       "name": "Cottage Comfort",
-      "price": "₹6,999",
+      "price": "₹9,500",
       "per": "per cottage · 2 guests",
       "highlight": false,
       "includes": [
@@ -19,9 +19,9 @@
     {
       "tag": "For couples",
       "name": "Romantic Half Board",
-      "price": "₹8,500",
+      "price": "₹11,500",
       "per": "per cottage · 2 guests",
-      "highlight": false,
+      "highlight": true,
       "includes": [
         "Cottage accommodation",
         "Breakfast for two",
@@ -32,14 +32,14 @@
     {
       "tag": "Signature",
       "name": "All-Inclusive",
-      "price": "₹10,999",
+      "price": "₹13,500",
       "per": "per cottage · 2 guests",
       "highlight": true,
       "includes": [
         "Breakfast, lunch, high tea & dinner",
         "Live BBQ or self-cooking on request",
         "Candle-light dinner, bonfire, movie under the stars, camping",
-        "Fishing, yoga, pool, cricket, badminton, football"
+        " Yoga, pool, cricket, badminton, football"
       ]
     }
   ],
