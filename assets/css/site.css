@@ -447,3 +447,16 @@ details.more-rates[open] summary:after{content:"−"}
 .brand .t{display:block;margin-top:7px;line-height:1.3}
 @media(min-width:900px){.site-head .bar{height:122px}}
 .site-head.over.solid .brand .lotus{filter:none}
+/* ---------- JD lotus gold on every filled button ---------- */
+:root{--jd-gold:linear-gradient(135deg,#C08A3A 0%,#D7AA60 28%,#F4D390 52%,#D7AA60 74%,#B98536 100%);--jd-gold-hover:linear-gradient(135deg,#B07C30 0%,#CC9D52 30%,#EAC77E 52%,#CC9D52 74%,#A9772C 100%);--jd-ink:#2B1D08}
+.btn-dark,.btn-gold,.bookbar button,.site-head.over.solid .nav-r .btn,.site-head:not(.over) .nav-r .btn,.mbar a+a{
+  background:var(--jd-gold);background-size:200% 100%;background-position:0 0;color:var(--jd-ink);border-color:transparent;
+  font-weight:500;text-shadow:0 1px 0 rgba(255,240,205,.45);box-shadow:inset 0 1px 0 rgba(255,245,215,.6),0 6px 18px -8px rgba(160,115,40,.55);
+  transition:background-position .6s ease,box-shadow .3s}
+.btn-dark:hover,.btn-gold:hover,.bookbar button:hover,.site-head.over.solid .nav-r .btn:hover,.site-head:not(.over) .nav-r .btn:hover,.mbar a+a:hover{
+  background:var(--jd-gold);background-size:200% 100%;background-position:100% 0;color:var(--jd-ink);box-shadow:inset 0 1px 0 rgba(255,245,215,.7),0 10px 24px -8px rgba(160,115,40,.7)}
+.btn-line:hover{background:var(--jd-gold);color:var(--jd-ink);border-color:transparent}
+.topline{background:var(--jd-gold);color:var(--jd-ink)}
+.topline a{color:var(--jd-ink);border-bottom-color:rgba(43,29,8,.5)}
+.topline b{color:var(--jd-ink);font-weight:600}
+.site-head.over .nav-r .btn{background:var(--jd-gold);background-size:200% 100%;color:var(--jd-ink);border-color:transparent;font-weight:500}
