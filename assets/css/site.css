@@ -424,7 +424,7 @@ details.more-rates[open] summary:after{content:"−"}
 /* loader: the lotus blooms upward out of its base, gold dots turning around it */
 .bloom{width:170px;height:170px}
 .bloom img{inset:auto;left:50%;top:50%;width:104px;height:auto;border-radius:0;object-fit:contain;transform-origin:50% 100%;
-  margin:-34px 0 0 -52px;animation:lotus 1.8s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 6px 18px rgba(184,146,74,.35))}
+  margin:-34px 0 0 -52px;animation:lotus 1.8s cubic-bezier(.2,.8,.2,1) both}
 .bloom .ring i{transform-origin:3.5px 85px}
 .loader .word{letter-spacing:.24em;font-size:1.05rem}
 @keyframes lotus{0%{opacity:0;transform:scale(.35,.1);clip-path:inset(100% 0 0 0)}40%{opacity:1}70%{transform:scale(1.04,1.04)}100%{opacity:1;transform:none;clip-path:inset(0 0 0 0)}}
@@ -435,3 +435,10 @@ details.more-rates[open] summary:after{content:"−"}
 .hero .place{color:#fff;font-size:.82rem;letter-spacing:.38em;font-weight:500}
 .hero .place:before,.hero .place:after{content:"";display:inline-block;width:40px;height:1px;background:var(--brass);vertical-align:middle;margin:0 16px}
 @media(max-width:600px){.hero .place:before,.hero .place:after{width:18px;margin:0 8px}.hero .place{letter-spacing:.24em;font-size:.7rem}}
+/* hero must never slide under the fixed header on short laptop screens */
+.hero{height:auto;min-height:100vh;min-height:100svh}
+.hero .in{padding-top:190px}
+@media(min-width:900px){.hero .in{padding-top:230px}}
+.hero h1{font-size:clamp(2.4rem,min(6.4vw,8.5vh),5.4rem)}
+.hero .sub{margin-top:min(22px,2.5vh)}
+@media(max-height:760px) and (min-width:900px){.hero .in{padding-bottom:140px}}
