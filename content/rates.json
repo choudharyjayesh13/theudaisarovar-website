@@ -15,39 +15,39 @@
       "title": "October – December 2026",
       "groups": [
         {
-          "period": "10 – 19 Oct 2026",
+          "period": "1NOv – 19 Oct 2026",
           "note": "Early season",
-          "lake_view": "₹4,500–5,700",
-          "pool_view": "₹5,500–6,700",
+          "lake_view": "₹6,999–9,500",
+          "pool_view": "₹6,999-9,500",
           "family_suite": "₹9,300–10,500"
         },
         {
           "period": "20 Oct – 3 Nov 2026",
           "note": "Festive build-up",
-          "lake_view": "₹6,800–9,500",
-          "pool_view": "₹7,800–10,500",
-          "family_suite": "₹11,600–13,300"
+          "lake_view": "₹6,999–9,500",
+          "pool_view": "₹6,999–10,500",
+          "family_suite": "₹10,000–13,300"
         },
         {
           "period": "4 – 30 Nov 2026",
           "note": "Diwali & wedding season",
-          "lake_view": "₹9,500–13,100",
-          "pool_view": "₹10,500–14,100",
-          "family_suite": "₹13,300–17,900"
+          "lake_view": "₹9,500–13,500",
+          "pool_view": "₹10,500–13,500",
+          "family_suite": "₹11,000-13,500"
         },
         {
           "period": "1 – 29 Dec 2026",
           "note": "Winter peak",
-          "lake_view": "₹11,300–12,100",
-          "pool_view": "₹12,300–13,100",
-          "family_suite": "₹16,100–16,900"
+          "lake_view": "₹9,500-13,500",
+          "pool_view": "₹9,500-13,500",
+          "family_suite": "₹11,000-15,500"
         },
         {
           "period": "30 – 31 Dec 2026",
           "note": "New Year’s Eve",
-          "lake_view": "₹12,700",
-          "pool_view": "₹13,700",
-          "family_suite": "₹17,500"
+          "lake_view": "₹14,000",
+          "pool_view": "₹14,000",
+          "family_suite": "₹14,000"
         }
       ]
     },
@@ -57,30 +57,30 @@
         {
           "period": "1 – 2 Jan 2027",
           "note": "New Year",
-          "lake_view": "₹7,100",
-          "pool_view": "₹8,100",
-          "family_suite": "₹12,400"
+          "lake_view": "₹9,500",
+          "pool_view": "₹9,500",
+          "family_suite": "₹13,500"
         },
         {
           "period": "Peak",
           "note": "3 Jan – 28 Feb · 20–22 Mar · 26–28 Mar",
-          "lake_view": "₹5,600",
-          "pool_view": "₹6,600",
-          "family_suite": "₹10,400"
+          "lake_view": "₹6,999",
+          "pool_view": "₹6,999",
+          "family_suite": "₹9,999"
         },
         {
           "period": "Shoulder",
           "note": "1–19 Mar · 23–25 Mar · 29 Mar – 15 Apr · 1–31 Jul",
-          "lake_view": "₹5,100",
-          "pool_view": "₹6,100",
-          "family_suite": "₹9,900"
+          "lake_view": "₹6,999",
+          "pool_view": "₹6,999",
+          "family_suite": "₹9,999"
         },
         {
           "period": "Summer",
           "note": "16 Apr – 30 Jun",
-          "lake_view": "₹4,500",
-          "pool_view": "₹5,000",
-          "family_suite": "₹8,500"
+          "lake_view": "₹6,999",
+          "pool_view": "₹6,999",
+          "family_suite": "₹9,999"
         }
       ]
     }
@@ -88,33 +88,33 @@
   "nights_title": "Night-by-night rates, 10 Oct – 31 Dec 2026",
   "nights": [
     {
-      "month": "October 2026",
-      "dates": "Sat 10 Oct",
-      "lake_view": "4,800",
-      "pool_view": "5,800",
-      "family_suite": "9,600",
+      "month": "November 2026",
+      "dates": "1 Nov  - 15Nov",
+      "lake_view": "₹6,999",
+      "pool_view": "₹6,999",
+      "family_suite": "₹6,999",
       "min_2_nights": false
     },
     {
       "month": "October 2026",
       "dates": "Sun 11 – Thu 15 Oct",
-      "lake_view": "4,500",
-      "pool_view": "5,500",
-      "family_suite": "9,300",
+      "lake_view": "₹6,999",
+      "pool_view": "5",
+      "family_suite": "₹6,999",
       "min_2_nights": false
     },
     {
       "month": "October 2026",
       "dates": "Fri 16 Oct",
-      "lake_view": "4,700",
-      "pool_view": "5,700",
-      "family_suite": "9,500",
+      "lake_view": "6,999",
+      "pool_view": "₹6,999",
+      "family_suite": "₹6,999",
       "min_2_nights": false
     },
     {
       "month": "October 2026",
       "dates": "Sat 17 Oct",
-      "lake_view": "5,700",
+      "lake_view": "₹6,999",
       "pool_view": "6,700",
       "family_suite": "10,500",
       "min_2_nights": false
