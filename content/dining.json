@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "title": "Lake City Café – Dining | The Udaisarovar, Udaipur",
+    "description": "Home-style vegetarian food at Lake City Café, The Udaisarovar: breakfast by the lake, candle-lit dinners and live BBQ nights. Meal plans for every stay."
+  },
+  "hero": {
+    "image": "/assets/ev-dining.jpg",
+    "label": "Lake City Café",
+    "title": "Home-style food by the water",
+    "photo_position": "center 60%"
+  },
+  "intro": {
+    "label": "Vegetarian · home-style",
+    "title": "Simple food, cooked with care",
+    "text": "Fresh paneer, slow-cooked dals, hot chapatis and seasonal vegetables. Breakfast by the water, lunch in the shade and dinner under the stars. Order to your cottage from the Guest App.",
+    "photo": "/assets/dining.jpg"
+  },
+  "menu": [
+    {
+      "item": "Breakfast",
+      "price": "₹300"
+    },
+    {
+      "item": "Lunch",
+      "price": "₹500"
+    },
+    {
+      "item": "Dinner & high tea",
+      "price": "₹800"
+    },
+    {
+      "item": "Value combo, e.g. cold coffee + sandwich",
+      "price": "₹499"
+    },
+    {
+      "item": "Live BBQ nights",
+      "price": "On request"
+    },
+    {
+      "item": "Candle-lit lakeside dinner",
+      "price": "On request"
+    }
+  ],
+  "menu_note": "Per person. Open daily 8:30 AM – 10:30 PM.",
+  "photos": [
+    "/assets/ev-brunch.jpg",
+    "/assets/bbq.jpg",
+    "/assets/ev-table.jpg"
+  ],
+  "meal_plans": {
+    "label": "Meal plans",
+    "title": "Add meals to any stay",
+    "text": "Breakfast is always included. Add lunch or dinner for ₹1,600, or all meals for ₹2,600, per room per night (Family Suite ₹2,400 / ₹3,900)."
+  }
+}

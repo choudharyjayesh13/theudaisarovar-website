@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "name": "THE UDAISAROVAR",
+    "tagline": "by JD Stays & Hospitality",
+    "short_line": "Lakeside Paradise · Udaipur",
+    "lotus_logo": "/assets/brand/jd-lotus.png",
+    "footer_logo": "/assets/brand/jd-stays-logo.png",
+    "loader_title": "JD STAYS & HOSPITALITY",
+    "loader_subtitle": "BY JD GROUP"
+  },
+  "style": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Jost",
+    "gold_style": "JD lotus gold"
+  },
+  "offer": {
+    "show": true,
+    "text": "Book direct and save 10% on stays of two nights or more",
+    "code": "UDAISAROVAR10"
+  },
+  "contact": {
+    "phone": "+91 88298 09555",
+    "package_phones": [
+      "+91 82330 99554",
+      "+91 96203 07861"
+    ],
+    "address": "Near Udaisagar Lake, Naglaphala, Lakadwas, Udaipur, Rajasthan 313003",
+    "maps_link": "https://maps.google.com/?q=The+Udaisarovar+Resort+Lakadwas+Udaipur",
+    "booking_link": "https://app.myjdgroup.com/book/",
+    "guest_app_link": "https://app.myjdgroup.com/guest/",
+    "instagram": "https://www.instagram.com/theudaisarovarudaipur/",
+    "instagram_handle": "@theudaisarovarudaipur",
+    "youtube": "https://www.youtube.com/channel/UCuA8AW9WiFMyuAGHxo6mR-A",
+    "jd_group_link": "https://www.myjdgroup.com"
+  },
+  "footer_about": "A private lakeside retreat on the shores of Udai Sagar, about twenty minutes from Udaipur city."
+}

@@ -1,0 +1,628 @@
+# Pages CMS — admin portal for theudaisarovar.com
+# Open https://app.pagescms.org, sign in with GitHub, pick this repository.
+# Every "Save" commits to GitHub; the website rebuilds and goes live in 1–2 minutes.
+
+media:
+  - name: photos
+    label: Photos
+    input: assets
+    output: /assets
+    categories: [image]
+  - name: videos
+    label: Videos
+    input: assets/video
+    output: /assets/video
+    categories: [video]
+  - name: files
+    label: PDF files
+    input: assets/files
+    output: /assets/files
+    categories: [document]
+
+settings:
+  commit:
+    templates:
+      update: "Website: update {path} (via admin portal)"
+
+content:
+  # ------------------------------------------------------------ SETTINGS
+  - name: site
+    label: "⚙️ Logo, fonts, colours & contact"
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: brand
+        label: Logo & name
+        type: object
+        fields:
+          - { name: name, label: "Resort name (header)", type: string, required: true }
+          - { name: tagline, label: "Line under the name", type: string }
+          - { name: short_line, label: "Short line (footer)", type: string }
+          - { name: lotus_logo, label: "Header logo (lotus)", type: image, options: { media: photos } }
+          - { name: footer_logo, label: "Footer logo (full JD Stays logo)", type: image, options: { media: photos } }
+          - { name: loader_title, label: "Loading screen: big text", type: string }
+          - { name: loader_subtitle, label: "Loading screen: small text", type: string }
+      - name: style
+        label: Fonts & colours
+        type: object
+        fields:
+          - name: heading_font
+            label: "Heading font (big titles)"
+            type: select
+            options: { values: ["Cormorant Garamond", "Playfair Display", "Cinzel", "Marcellus", "Libre Baskerville", "Bodoni Moda"] }
+          - name: body_font
+            label: "Text font (paragraphs, menu)"
+            type: select
+            options: { values: ["Jost", "Montserrat", "Lato", "Poppins", "Mulish", "Nunito Sans"] }
+          - name: gold_style
+            label: "Button & accent colour"
+            type: select
+            options: { values: ["JD lotus gold", "Rose gold", "Antique bronze", "Champagne"] }
+      - name: offer
+        label: Offer strip (top of every page)
+        type: object
+        fields:
+          - { name: show, label: "Show the offer strip", type: boolean }
+          - { name: text, label: "Offer text", type: string }
+          - { name: code, label: "Promo code", type: string }
+      - name: contact
+        label: Contact & links
+        type: object
+        fields:
+          - { name: phone, label: "Main phone / WhatsApp", type: string, required: true, description: "e.g. +91 88298 09555 — used for every WhatsApp and call button" }
+          - { name: package_phones, label: "Package booking numbers", type: string, list: true }
+          - { name: address, label: "Address", type: text }
+          - { name: maps_link, label: "Google Maps link", type: string }
+          - { name: booking_link, label: "Book Now link (booking engine)", type: string }
+          - { name: guest_app_link, label: "Guest App link", type: string }
+          - { name: instagram, label: "Instagram link", type: string }
+          - { name: instagram_handle, label: "Instagram name (@...)", type: string }
+          - { name: youtube, label: "YouTube link", type: string }
+          - { name: jd_group_link, label: "JD Group website", type: string }
+      - { name: footer_about, label: "Footer: one line about the resort", type: text }
+
+  # ------------------------------------------------------------ HOME
+  - name: home
+    label: "🏠 Home page"
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - name: hero
+        label: Top video & heading
+        type: object
+        fields:
+          - { name: video, label: "Top video (MP4, no sound, under 10 MB)", type: file, options: { media: videos } }
+          - { name: photo, label: "Photo shown until the video plays (laptop)", type: image, options: { media: photos } }
+          - { name: phone_photo, label: "Photo for phones (tall photo works best)", type: image, options: { media: photos } }
+          - { name: title, label: "Heading", type: string }
+          - { name: title_italic, label: "Heading: last words in italics", type: string }
+          - { name: subtitle, label: "Line under heading", type: text }
+          - { name: rooms_from, label: "'Rooms from' price in booking bar", type: string }
+      - name: welcome
+        label: Welcome section
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: "Heading", type: string }
+          - { name: text, label: "Text", type: text }
+      - name: facts
+        label: Numbers row (5 · 20 min · 21,556 · 400–600)
+        type: object
+        list: { max: 4 }
+        fields:
+          - { name: number, label: Number, type: string }
+          - { name: label, label: Label, type: string }
+      - name: reel
+        label: Moving photo strip
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: "Heading", type: string }
+          - name: photos
+            label: Photos
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Photo, type: image, options: { media: photos } }
+              - { name: caption, label: Caption, type: string }
+      - name: stay
+        label: Stay section
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: "Heading", type: string }
+          - { name: text, label: "Text", type: text }
+          - { name: photo, label: "Big photo", type: image, options: { media: photos } }
+          - { name: small_photo, label: "Small overlapping photo", type: image, options: { media: photos } }
+      - name: experiences
+        label: Experiences tiles
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: "Heading", type: string }
+          - name: tiles
+            label: Tiles
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Photo, type: image, options: { media: photos } }
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: string }
+              - { name: price, label: "Price (optional)", type: string }
+              - { name: link, label: "Opens page", type: string }
+      - name: dining
+        label: Dining section
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: "Heading", type: string }
+          - { name: text, label: "Text", type: text }
+          - { name: hours, label: "Opening hours", type: string }
+          - { name: photo, label: "Photo", type: image, options: { media: photos } }
+      - name: events
+        label: Events banner
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: "Heading", type: string }
+          - { name: text, label: "Text", type: text }
+          - { name: price_line, label: "Price line", type: string }
+          - { name: photo, label: "Background photo", type: image, options: { media: photos } }
+      - name: journal
+        label: Journal stories
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: "Heading", type: string }
+          - name: stories
+            label: Stories
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Photo, type: image, options: { media: photos } }
+              - { name: tag, label: "Small tag", type: string }
+              - { name: title, label: Title, type: string }
+              - { name: link, label: Link, type: string }
+      - name: instagram
+        label: Instagram strip
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: photos, label: "Photos (6 look best)", type: image, list: true, options: { media: photos } }
+
+  # ------------------------------------------------------------ PACKAGES
+  - name: packages
+    label: "🎁 Packages (home + rates page)"
+    type: file
+    path: content/packages.json
+    format: json
+    fields:
+      - { name: label, label: "Small gold line", type: string }
+      - { name: title, label: "Heading", type: string }
+      - { name: text, label: "Text", type: text }
+      - name: packages
+        label: Packages
+        type: object
+        list: true
+        fields:
+          - { name: tag, label: "Small tag (e.g. For couples)", type: string }
+          - { name: name, label: "Package name", type: string }
+          - { name: price, label: "Price (e.g. ₹8,500)", type: string }
+          - { name: per, label: "Under price", type: string }
+          - { name: highlight, label: "Highlight this package (gold border)", type: boolean }
+          - { name: includes, label: "What's included", type: string, list: true }
+      - { name: note, label: "Note under packages", type: text }
+      - { name: whatsapp_number, label: "WhatsApp number for package bookings", type: string }
+
+  # ------------------------------------------------------------ STAY
+  - name: stay
+    label: "🛏️ Stay page (rooms)"
+    type: file
+    path: content/stay.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - name: hero
+        label: Top photo
+        type: object
+        fields:
+          - { name: image, label: Photo, type: image, options: { media: photos } }
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: photo_position, label: "Photo position (e.g. center 60%)", type: string }
+      - name: intro
+        label: Intro
+        type: object
+        fields:
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - name: elements
+        label: Cottage names (Air, Water, Earth, Fire)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: label, label: "Small label", type: string }
+      - name: rooms
+        label: Rooms
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Room name (must match the booking engine)", type: string }
+          - { name: count, label: "Small line (e.g. Three cottages)", type: string }
+          - { name: photo, label: Photo, type: image, options: { media: photos } }
+          - { name: price, label: "From price", type: string }
+          - { name: text, label: Description, type: text }
+          - name: details
+            label: Details
+            type: object
+            list: true
+            fields:
+              - { name: label, label: "Label (Guests, Plan, View…)", type: string }
+              - { name: value, label: Value, type: string }
+      - name: buyout
+        label: Whole-resort booking
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - name: options
+            label: Options
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: price, label: Price, type: string }
+              - { name: per, label: "per night / per day", type: string }
+              - { name: text, label: Text, type: text }
+      - name: notes
+        label: Three info columns
+        type: object
+        list: { max: 3 }
+        fields:
+          - { name: title, label: Heading, type: string }
+          - { name: items, label: Lines, type: string, list: true }
+
+  # ------------------------------------------------------------ DINING
+  - name: dining
+    label: "🍽️ Dining page"
+    type: file
+    path: content/dining.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - name: hero
+        label: Top photo
+        type: object
+        fields:
+          - { name: image, label: Photo, type: image, options: { media: photos } }
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: photo_position, label: "Photo position", type: string }
+      - name: intro
+        label: Intro
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: photo, label: Photo, type: image, options: { media: photos } }
+      - name: menu
+        label: Menu & prices
+        type: object
+        list: true
+        fields:
+          - { name: item, label: Item, type: string }
+          - { name: price, label: "Price (or 'On request')", type: string }
+      - { name: menu_note, label: "Note under menu", type: string }
+      - { name: photos, label: "Three photos row", type: image, list: { max: 3 }, options: { media: photos } }
+      - name: meal_plans
+        label: Meal plans box
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+
+  # ------------------------------------------------------------ EXPERIENCES
+  - name: experiences
+    label: "🔥 Experiences page"
+    type: file
+    path: content/experiences.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - name: hero
+        label: Top photo
+        type: object
+        fields:
+          - { name: image, label: Photo, type: image, options: { media: photos } }
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: photo_position, label: "Photo position", type: string }
+      - name: experiences
+        label: Experiences
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Short id for links (e.g. pool)", type: string }
+          - { name: photo, label: Photo, type: image, options: { media: photos } }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: price, label: "Price (optional)", type: string }
+      - name: notes
+        label: Three info columns
+        type: object
+        list: { max: 3 }
+        fields:
+          - { name: title, label: Heading, type: string }
+          - { name: items, label: Lines, type: string, list: true }
+      - name: videos
+        label: YouTube videos
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - name: list
+            label: Videos
+            type: object
+            list: true
+            fields:
+              - { name: youtube_id, label: "YouTube video id (the part after v= or /shorts/)", type: string }
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: string }
+      - name: sightseeing
+        label: Sightseeing
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - name: trips
+            label: Trips
+            type: object
+            list: true
+            fields:
+              - { name: photo, label: Photo, type: image, options: { media: photos } }
+              - { name: title, label: Title, type: string }
+              - { name: price, label: Price, type: string }
+              - { name: text, label: Text, type: text }
+
+  # ------------------------------------------------------------ EVENTS
+  - name: events
+    label: "💍 Weddings & Events page"
+    type: file
+    path: content/events.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - name: hero
+        label: Top photo
+        type: object
+        fields:
+          - { name: image, label: Photo, type: image, options: { media: photos } }
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: photo_position, label: "Photo position", type: string }
+      - name: intro
+        label: Intro
+        type: object
+        fields:
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - name: facts
+        label: Numbers row
+        type: object
+        list: { max: 4 }
+        fields:
+          - { name: number, label: Number, type: string }
+          - { name: label, label: Label, type: string }
+      - name: event_types
+        label: Event photo tiles
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: Photo, type: image, options: { media: photos } }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: string }
+      - name: buyout
+        label: Whole-resort booking
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: price, label: Price, type: string }
+          - { name: per, label: "per day", type: string }
+          - { name: rooms_only, label: "Rooms-only line", type: text }
+          - { name: note, label: "Small note", type: text }
+          - { name: photo, label: "Big photo", type: image, options: { media: photos } }
+          - { name: small_photo, label: "Small overlapping photo", type: image, options: { media: photos } }
+          - { name: brochure, label: "Brochure PDF", type: file, options: { media: files } }
+      - name: videos
+        label: Event videos
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - name: list
+            label: Videos
+            type: object
+            list: true
+            fields:
+              - { name: video, label: "Video (MP4)", type: file, options: { media: videos } }
+              - { name: poster, label: "Cover photo", type: image, options: { media: photos } }
+              - { name: caption, label: Caption, type: string }
+
+  # ------------------------------------------------------------ RATES
+  - name: rates
+    label: "💰 Rates page"
+    type: file
+    path: content/rates.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - name: hero
+        label: Top photo
+        type: object
+        fields:
+          - { name: image, label: Photo, type: image, options: { media: photos } }
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: photo_position, label: "Photo position", type: string }
+      - { name: seasons_intro, label: "Text above rate tables", type: text }
+      - name: season_tables
+        label: Seasonal rate tables
+        type: object
+        list: true
+        fields:
+          - { name: title, label: "Table title (e.g. October – December 2026)", type: string }
+          - name: groups
+            label: Seasons
+            type: object
+            list: true
+            fields:
+              - { name: period, label: "Dates (e.g. 4 – 30 Nov 2026)", type: string }
+              - { name: note, label: "Season name", type: string }
+              - { name: lake_view, label: "Lake View rate", type: string }
+              - { name: pool_view, label: "Pool View rate", type: string }
+              - { name: family_suite, label: "Family Suite rate", type: string }
+      - { name: nights_title, label: "Night-by-night table title", type: string }
+      - name: nights
+        label: Night-by-night rates
+        type: object
+        list: true
+        fields:
+          - { name: month, label: "Month (e.g. November 2026)", type: string }
+          - { name: dates, label: "Dates (e.g. Wed 4 – Sat 14 Nov)", type: string }
+          - { name: lake_view, label: "Lake View", type: string }
+          - { name: pool_view, label: "Pool View", type: string }
+          - { name: family_suite, label: "Family Suite", type: string }
+          - { name: min_2_nights, label: "Minimum 2 nights", type: boolean }
+      - name: meal_plans
+        label: Meal plans table
+        type: object
+        list: true
+        fields:
+          - { name: plan, label: "Plan (e.g. MAP – breakfast + lunch or dinner)", type: string }
+          - { name: lake_pool, label: "Lake / Pool", type: string }
+          - { name: family_suite, label: "Family Suite", type: string }
+      - { name: meal_note, label: "Note under meal plans", type: string }
+      - name: extras
+        label: Extras table
+        type: object
+        list: true
+        fields:
+          - { name: item, label: Item, type: text }
+          - { name: rate, label: Rate, type: string }
+      - { name: gst_note, label: "GST note", type: text }
+      - name: terms
+        label: Booking terms (3 columns)
+        type: object
+        list: { max: 3 }
+        fields:
+          - { name: title, label: Heading, type: string }
+          - { name: items, label: Lines, type: text, list: true }
+
+  # ------------------------------------------------------------ GALLERY
+  - name: gallery
+    label: "🖼️ Gallery"
+    type: file
+    path: content/gallery.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - { name: title, label: Heading, type: string }
+      - name: groups
+        label: Photo groups
+        type: object
+        list: true
+        fields:
+          - { name: title, label: "Group name", type: string }
+          - name: photos
+            label: Photos
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Photo, type: image, options: { media: photos } }
+              - { name: caption, label: Caption, type: string }
+
+  # ------------------------------------------------------------ CONTACT
+  - name: contact
+    label: "📞 Contact page"
+    type: file
+    path: content/contact.json
+    format: json
+    fields:
+      - name: seo
+        label: Google search text
+        type: object
+        fields:
+          - { name: title, label: "Title in Google", type: string }
+          - { name: description, label: "Description in Google", type: text }
+      - name: hero
+        label: Top photo
+        type: object
+        fields:
+          - { name: image, label: Photo, type: image, options: { media: photos } }
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: photo_position, label: "Photo position", type: string }
+      - { name: title, label: Heading, type: string }
+      - { name: text, label: Text, type: text }
+      - name: guest_app
+        label: Guest App section
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: features, label: Features, type: string, list: true }
+          - { name: note, label: Note, type: string }
+          - { name: photo, label: Photo, type: image, options: { media: photos } }
+      - name: partners
+        label: Travel partners band
+        type: object
+        fields:
+          - { name: label, label: "Small gold line", type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }

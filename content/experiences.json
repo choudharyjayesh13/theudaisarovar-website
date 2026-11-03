@@ -1,0 +1,121 @@
+{
+  "seo": {
+    "title": "Experiences & Sightseeing | The Udaisarovar, Udaipur",
+    "description": "Infinity pool on the lake, lakeside camping, bonfire nights, open-air cinema, horse riding and Udaipur, Nathdwara and Chittorgarh day trips from The Udaisarovar."
+  },
+  "hero": {
+    "image": "/assets/hero.jpg",
+    "label": "Experiences",
+    "title": "Days by the pool, nights under the stars",
+    "photo_position": "center 62%"
+  },
+  "experiences": [
+    {
+      "id": "pool",
+      "photo": "/assets/pool-lake2.jpg",
+      "title": "Infinity pool on the lake",
+      "price": "",
+      "text": "The edge of the pool meets Udai Sagar, the signature view of every stay. Two swim sessions daily, 8–11 AM and 4:30–7:30 PM."
+    },
+    {
+      "id": "camping",
+      "photo": "/assets/camping.jpg",
+      "title": "Lakeside camping",
+      "price": "₹3,000 per tent for two",
+      "text": "Tents on the lake shore with a bonfire and live music system. Mattress, bed and blanket, breakfast and campsite assistance are included. Best from October to March; group camps on request."
+    },
+    {
+      "id": "bonfire",
+      "photo": "/assets/bonfire.jpg",
+      "title": "Bonfire & music nights",
+      "price": "",
+      "text": "Gather round the fire on the lawn with music, with the lights of the lake shimmering across the water."
+    },
+    {
+      "id": "movies",
+      "photo": "/assets/movienight.jpg",
+      "title": "Cinema under the stars",
+      "price": "",
+      "text": "An open-air projector screening by the lake, every night from 9 PM."
+    },
+    {
+      "id": "horse",
+      "photo": "/assets/horse.jpg",
+      "title": "Horse riding",
+      "price": "",
+      "text": "Ride our white horse across the lakeside lawns with our riding partner. Add it to any retreat package for ₹999 per person, or ask at reception."
+    }
+  ],
+  "notes": [
+    {
+      "title": "Games",
+      "items": [
+        "Daily, 5–7 PM",
+        "Chess, ludo, badminton, football",
+        "Cricket and yoga in packages"
+      ]
+    },
+    {
+      "title": "Transfers",
+      "items": [
+        "Airport pick-up and drop",
+        "Railway station pick-up and drop",
+        "On request"
+      ]
+    },
+    {
+      "title": "Book an experience",
+      "items": [
+        "At reception",
+        "In the Guest App",
+        "On WhatsApp"
+      ]
+    }
+  ],
+  "videos": {
+    "label": "Watch",
+    "title": "The Udaisarovar on film",
+    "list": [
+      {
+        "youtube_id": "Kcbh99NyEVw",
+        "title": "Horse riding",
+        "text": "Our white horse on the lakeside lawns."
+      },
+      {
+        "youtube_id": "ow7yHuqjS2k",
+        "title": "The view",
+        "text": "Udai Sagar and the Aravalli hills from the resort."
+      },
+      {
+        "youtube_id": "t8eyQfAb8mA",
+        "title": "Welcome",
+        "text": "A walk through the cottages, pool and lawns."
+      }
+    ]
+  },
+  "sightseeing": {
+    "label": "Sightseeing by cab",
+    "title": "Explore Udaipur and Mewar",
+    "text": "We arrange the cab. Book at reception, in the Guest App or on WhatsApp.",
+    "trips": [
+      {
+        "photo": "/assets/x-citypalace.jpg",
+        "title": "Udaipur city tour",
+        "price": "₹2,500 – 3,000 by cab",
+        "text": "City Palace, Lake Pichola, Jagdish Temple, Saheliyon ki Bari, Fateh Sagar, Sajjangarh Monsoon Palace and Bagore ki Haveli."
+      },
+      {
+        "photo": "/assets/x-shrinathji2.jpg",
+        "title": "Nathdwara",
+        "price": "₹3,000",
+        "text": "Shrinathji darshan, with a full-day cab."
+      },
+      {
+        "photo": "/assets/x-chittor.jpg",
+        "title": "Chittorgarh",
+        "price": "₹3,500",
+        "text": "Fort and city day trip. Sedan for up to 4 guests; Ertiga for 5 on request."
+      }
+    ]
+  }
+}

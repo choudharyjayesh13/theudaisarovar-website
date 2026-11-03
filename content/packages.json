@@ -1,0 +1,48 @@
+{
+  "label": "Retreat packages · Oct 2026 – Jan 2027",
+  "title": "Escape the ordinary",
+  "text": "Per cottage for two guests. Available only when you book directly with us by phone or WhatsApp, not on the online booking engine or travel sites.",
+  "packages": [
+    {
+      "tag": "Stay",
+      "name": "Cottage Comfort",
+      "price": "₹6,999",
+      "per": "per cottage · 2 guests",
+      "highlight": false,
+      "includes": [
+        "Cottage accommodation",
+        "Breakfast for two",
+        "A peaceful resort getaway",
+        "Resort facilities as per policy"
+      ]
+    },
+    {
+      "tag": "For couples",
+      "name": "Romantic Half Board",
+      "price": "₹8,500",
+      "per": "per cottage · 2 guests",
+      "highlight": false,
+      "includes": [
+        "Cottage accommodation",
+        "Breakfast for two",
+        "Lunch or dinner for two",
+        "Special candle-light dinner"
+      ]
+    },
+    {
+      "tag": "Signature",
+      "name": "All-Inclusive",
+      "price": "₹10,999",
+      "per": "per cottage · 2 guests",
+      "highlight": true,
+      "includes": [
+        "Breakfast, lunch, high tea & dinner",
+        "Live BBQ or self-cooking on request",
+        "Candle-light dinner, bonfire, movie under the stars, camping",
+        "Fishing, yoga, pool, cricket, badminton, football"
+      ]
+    }
+  ],
+  "note": "Add horse riding to any package for ₹999 per person. BBQ and self-cooking on advance request; outdoor activities subject to weather.",
+  "whatsapp_number": "+91 82330 99554"
+}

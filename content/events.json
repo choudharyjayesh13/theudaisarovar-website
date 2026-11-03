@@ -1,0 +1,94 @@
+{
+  "seo": {
+    "title": "Lakeside Weddings & Events Venue in Udaipur | The Udaisarovar",
+    "description": "A 21,556 sq ft lakeside lawn in Udaipur for weddings, Holi, New Year's Eve, birthdays and corporate offsites for 400–600 guests. Full property buyout from ₹1,20,000 a day."
+  },
+  "hero": {
+    "image": "/assets/holi.jpg",
+    "label": "Weddings & Events",
+    "title": "Celebrate on the shores of Udai Sagar",
+    "photo_position": "center"
+  },
+  "intro": {
+    "title": "A lakeside venue for the days you'll remember",
+    "text": "A 21,556 sq ft lawn with three settings, the garden lawn, the lakefront shore and the poolside deck. We host weddings and phere, Udaipur's first lakeside Holi, New Year's Eve and private parties, with production, décor and sound by JD Production & Entertainers and Pronite."
+  },
+  "facts": [
+    {
+      "number": "21,556",
+      "label": "Sq ft of lawn"
+    },
+    {
+      "number": "3",
+      "label": "Event settings"
+    },
+    {
+      "number": "400–600",
+      "label": "Guests"
+    },
+    {
+      "number": "5",
+      "label": "Bedrooms on site"
+    }
+  ],
+  "event_types": [
+    {
+      "photo": "/assets/ev-wedding.jpg",
+      "title": "Weddings & phere",
+      "text": "The lake as your backdrop."
+    },
+    {
+      "photo": "/assets/ev-holi.jpg",
+      "title": "Lakeside Holi",
+      "text": "Udaipur's first lakeside Holi, by Pronite."
+    },
+    {
+      "photo": "/assets/ev-dj.jpg",
+      "title": "New Year's Eve",
+      "text": "Music and lights over the water."
+    },
+    {
+      "photo": "/assets/ev-birthday.jpg",
+      "title": "Birthdays & baby showers",
+      "text": "On the lawn, the shore or the pool deck."
+    },
+    {
+      "photo": "/assets/ev-brunch.jpg",
+      "title": "Corporate offsites",
+      "text": "Stay, meals and team time by the lake."
+    },
+    {
+      "photo": "/assets/mandap.jpg",
+      "title": "Three settings",
+      "text": "Garden lawn, lakefront shore, poolside deck."
+    }
+  ],
+  "buyout": {
+    "label": "Full property buyout",
+    "title": "The whole resort, for your celebration",
+    "text": "All room keys plus the garden and function area, with the wedding party staying on site.",
+    "price": "₹1,20,000",
+    "per": "per day",
+    "rooms_only": "Only need the rooms? All five cottages with all meals are ₹40,000 a night.",
+    "note": "Event packages for 400–600 guests: send us your brief for a quote.",
+    "photo": "/assets/wedding-couple.jpg",
+    "small_photo": "/assets/wedding-stage.jpg",
+    "brochure": "/assets/files/brochure.pdf"
+  },
+  "videos": {
+    "label": "On film",
+    "title": "Nights by the lake",
+    "list": [
+      {
+        "video": "/assets/event-video-1.mp4",
+        "poster": "/assets/mandap.jpg",
+        "caption": "Event moments at The Udaisarovar"
+      },
+      {
+        "video": "/assets/event-video-2.mp4",
+        "poster": "/assets/ev-dj.jpg",
+        "caption": "A lakeside party night"
+      }
+    ]
+  }
+}

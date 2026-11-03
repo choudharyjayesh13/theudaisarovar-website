@@ -1,0 +1,477 @@
+{
+  "seo": {
+    "title": "Room Rates & Retreat Packages 2026–27 | The Udaisarovar, Udaipur",
+    "description": "Seasonal room rates, night-by-night prices, meal plans and retreat packages from ₹6,999 at The Udaisarovar, a lakeside resort in Udaipur. Booking terms and GST."
+  },
+  "hero": {
+    "image": "/assets/palms.jpg",
+    "label": "Rates & Packages",
+    "title": "Rates for every season",
+    "photo_position": "center 70%"
+  },
+  "seasons_intro": "Per room per night, 2 adults (Family Suite 3 adults), breakfast included, before GST. Valid 10 October 2026 – 31 July 2027.",
+  "season_tables": [
+    {
+      "title": "October – December 2026",
+      "groups": [
+        {
+          "period": "10 – 19 Oct 2026",
+          "note": "Early season",
+          "lake_view": "₹4,500–5,700",
+          "pool_view": "₹5,500–6,700",
+          "family_suite": "₹9,300–10,500"
+        },
+        {
+          "period": "20 Oct – 3 Nov 2026",
+          "note": "Festive build-up",
+          "lake_view": "₹6,800–9,500",
+          "pool_view": "₹7,800–10,500",
+          "family_suite": "₹11,600–13,300"
+        },
+        {
+          "period": "4 – 30 Nov 2026",
+          "note": "Diwali & wedding season",
+          "lake_view": "₹9,500–13,100",
+          "pool_view": "₹10,500–14,100",
+          "family_suite": "₹13,300–17,900"
+        },
+        {
+          "period": "1 – 29 Dec 2026",
+          "note": "Winter peak",
+          "lake_view": "₹11,300–12,100",
+          "pool_view": "₹12,300–13,100",
+          "family_suite": "₹16,100–16,900"
+        },
+        {
+          "period": "30 – 31 Dec 2026",
+          "note": "New Year’s Eve",
+          "lake_view": "₹12,700",
+          "pool_view": "₹13,700",
+          "family_suite": "₹17,500"
+        }
+      ]
+    },
+    {
+      "title": "January – July 2027",
+      "groups": [
+        {
+          "period": "1 – 2 Jan 2027",
+          "note": "New Year",
+          "lake_view": "₹7,100",
+          "pool_view": "₹8,100",
+          "family_suite": "₹12,400"
+        },
+        {
+          "period": "Peak",
+          "note": "3 Jan – 28 Feb · 20–22 Mar · 26–28 Mar",
+          "lake_view": "₹5,600",
+          "pool_view": "₹6,600",
+          "family_suite": "₹10,400"
+        },
+        {
+          "period": "Shoulder",
+          "note": "1–19 Mar · 23–25 Mar · 29 Mar – 15 Apr · 1–31 Jul",
+          "lake_view": "₹5,100",
+          "pool_view": "₹6,100",
+          "family_suite": "₹9,900"
+        },
+        {
+          "period": "Summer",
+          "note": "16 Apr – 30 Jun",
+          "lake_view": "₹4,500",
+          "pool_view": "₹5,000",
+          "family_suite": "₹8,500"
+        }
+      ]
+    }
+  ],
+  "nights_title": "Night-by-night rates, 10 Oct – 31 Dec 2026",
+  "nights": [
+    {
+      "month": "October 2026",
+      "dates": "Sat 10 Oct",
+      "lake_view": "4,800",
+      "pool_view": "5,800",
+      "family_suite": "9,600",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Sun 11 – Thu 15 Oct",
+      "lake_view": "4,500",
+      "pool_view": "5,500",
+      "family_suite": "9,300",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Fri 16 Oct",
+      "lake_view": "4,700",
+      "pool_view": "5,700",
+      "family_suite": "9,500",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Sat 17 Oct",
+      "lake_view": "5,700",
+      "pool_view": "6,700",
+      "family_suite": "10,500",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Sun 18 – Mon 19 Oct",
+      "lake_view": "4,700",
+      "pool_view": "5,700",
+      "family_suite": "9,500",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Tue 20 Oct",
+      "lake_view": "7,400",
+      "pool_view": "8,400",
+      "family_suite": "12,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Wed 21 Oct",
+      "lake_view": "6,800",
+      "pool_view": "7,800",
+      "family_suite": "11,600",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Thu 22 Oct",
+      "lake_view": "7,400",
+      "pool_view": "8,400",
+      "family_suite": "12,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Fri 23 Oct",
+      "lake_view": "7,900",
+      "pool_view": "8,900",
+      "family_suite": "12,700",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Sat 24 Oct",
+      "lake_view": "7,400",
+      "pool_view": "8,400",
+      "family_suite": "12,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Sun 25 – Thu 29 Oct",
+      "lake_view": "6,800",
+      "pool_view": "7,800",
+      "family_suite": "11,600",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Fri 30 Oct",
+      "lake_view": "7,900",
+      "pool_view": "8,900",
+      "family_suite": "12,700",
+      "min_2_nights": false
+    },
+    {
+      "month": "October 2026",
+      "dates": "Sat 31 Oct",
+      "lake_view": "7,400",
+      "pool_view": "8,400",
+      "family_suite": "12,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Sun 1 – Tue 3 Nov",
+      "lake_view": "9,500",
+      "pool_view": "10,500",
+      "family_suite": "13,300",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Wed 4 – Sat 14 Nov",
+      "lake_view": "9,500",
+      "pool_view": "10,500",
+      "family_suite": "13,300",
+      "min_2_nights": true
+    },
+    {
+      "month": "November 2026",
+      "dates": "Sun 15 Nov",
+      "lake_view": "9,500",
+      "pool_view": "10,500",
+      "family_suite": "13,300",
+      "min_2_nights": true
+    },
+    {
+      "month": "November 2026",
+      "dates": "Mon 16 Nov",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": true
+    },
+    {
+      "month": "November 2026",
+      "dates": "Tue 17 Nov",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Wed 18 – Sun 22 Nov",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Mon 23 Nov",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Tue 24 – Wed 25 Nov",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Thu 26 Nov",
+      "lake_view": "10,900",
+      "pool_view": "11,900",
+      "family_suite": "15,700",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Fri 27 Nov",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Sat 28 Nov",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Sun 29 Nov",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "November 2026",
+      "dates": "Mon 30 Nov",
+      "lake_view": "13,100",
+      "pool_view": "14,100",
+      "family_suite": "17,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Tue 1 – Tue 8 Dec",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Wed 9 Dec",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Thu 10 – Tue 15 Dec",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Wed 16 Dec",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Thu 17 – Fri 18 Dec",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Sat 19 Dec",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Sun 20 Dec",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Mon 21 Dec",
+      "lake_view": "12,100",
+      "pool_view": "13,100",
+      "family_suite": "16,900",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Tue 22 – Wed 23 Dec",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": false
+    },
+    {
+      "month": "December 2026",
+      "dates": "Thu 24 Dec",
+      "lake_view": "11,300",
+      "pool_view": "12,300",
+      "family_suite": "16,100",
+      "min_2_nights": true
+    },
+    {
+      "month": "December 2026",
+      "dates": "Fri 25 – Sat 26 Dec",
+      "lake_view": "11,700",
+      "pool_view": "12,700",
+      "family_suite": "16,500",
+      "min_2_nights": true
+    },
+    {
+      "month": "December 2026",
+      "dates": "Sun 27 – Tue 29 Dec",
+      "lake_view": "11,400",
+      "pool_view": "12,400",
+      "family_suite": "16,200",
+      "min_2_nights": true
+    },
+    {
+      "month": "December 2026",
+      "dates": "Wed 30 – Thu 31 Dec",
+      "lake_view": "12,700",
+      "pool_view": "13,700",
+      "family_suite": "17,500",
+      "min_2_nights": true
+    }
+  ],
+  "meal_plans": [
+    {
+      "plan": "CP – breakfast",
+      "lake_pool": "included",
+      "family_suite": "included"
+    },
+    {
+      "plan": "MAP – breakfast + lunch or dinner",
+      "lake_pool": "+ ₹1,600",
+      "family_suite": "+ ₹2,400"
+    },
+    {
+      "plan": "AP – all meals",
+      "lake_pool": "+ ₹2,600",
+      "family_suite": "+ ₹3,900"
+    }
+  ],
+  "meal_note": "No room-only plan.",
+  "extras": [
+    {
+      "item": "Extra bed / extra adult (bed, breakfast & entry) — Lake View · Pool View · Family Suite",
+      "rate": "₹1,700 · ₹1,800 · ₹1,700"
+    },
+    {
+      "item": "Extra adult on breakfast + lunch or dinner / all meals",
+      "rate": "+₹800 / +₹1,300"
+    },
+    {
+      "item": "Child (7–17 years)",
+      "rate": "₹1,000"
+    },
+    {
+      "item": "All 5 cottages (5 bedrooms, all meals)",
+      "rate": "₹40,000 / night"
+    },
+    {
+      "item": "Full property buyout (all room keys + garden & function area)",
+      "rate": "₹1,20,000 / day"
+    },
+    {
+      "item": "Camping (per tent for 2 — breakfast, bonfire, live music system, lakeside setting, mattress, bed & blanket and campsite assistance)",
+      "rate": "₹3,000"
+    }
+  ],
+  "gst_note": "GST extra: 5% if the room rate is up to ₹7,500 a night, 18% above. Minimum 2 nights over Diwali and from 24 Dec 2026 to 2 Jan 2027. Rates subject to availability.",
+  "terms": [
+    {
+      "title": "Booking & payment",
+      "items": [
+        "Book online, on WhatsApp or by phone; we confirm availability.",
+        "A 50% advance confirms the booking; the balance is paid on arrival.",
+        "Confirmation is issued once the advance is received.",
+        "Festival dates may sell out early."
+      ]
+    },
+    {
+      "title": "Rates & taxes",
+      "items": [
+        "Per room per night, 2 adults (Family Suite 3 adults), before GST.",
+        "CP (breakfast), MAP (breakfast + lunch or dinner), AP (all meals).",
+        "GST: 5% up to ₹7,500 a night, 18% above.",
+        "Minimum 2 nights: 5–15 Nov 2026 (Diwali) and 24 Dec 2026 – 2 Jan 2027."
+      ]
+    },
+    {
+      "title": "Good to know",
+      "items": [
+        "Extra adult ₹1,700 (Lake View, Family Suite) or ₹1,800 (Pool View) with breakfast; +₹800 per extra meal.",
+        "Child (7–17 years) ₹1,000.",
+        "Pool 8–11 AM and 4:30–7:30 PM; café 8:30 AM – 10:30 PM.",
+        "Free parking and Wi-Fi. Transfers on request."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "seo": {
+    "title": "Cottages & Family Suite | The Udaisarovar, Lakeside Resort Udaipur",
+    "description": "Four elemental lake-view and pool-view cottages and a Family Suite on Udai Sagar, Udaipur, from ₹4,500 a night with breakfast. Book all 5 cottages or the whole resort."
+  },
+  "hero": {
+    "image": "/assets/p-udaisarovar.jpg",
+    "label": "Stay",
+    "title": "Cottages by the water",
+    "photo_position": "center 60%"
+  },
+  "intro": {
+    "title": "Four elements, one lake",
+    "text": "Five bedrooms in all: four elemental cottages named Air, Water, Earth and Fire, and a stone-finish Family Suite. Every stay includes breakfast, free parking, Wi-Fi and the Guest App for menus, food orders and timings."
+  },
+  "elements": [
+    {
+      "name": "Air",
+      "label": "Cottage 01"
+    },
+    {
+      "name": "Water",
+      "label": "Cottage 02"
+    },
+    {
+      "name": "Earth",
+      "label": "Cottage 03"
+    },
+    {
+      "name": "Fire",
+      "label": "Cottage 04"
+    }
+  ],
+  "rooms": [
+    {
+      "name": "Lake View Cottage",
+      "count": "Three cottages",
+      "photo": "/assets/room.jpg",
+      "price": "₹4,500",
+      "text": "Three of the elemental cottages face Udai Sagar directly. Wake up to the lake and watch the sun set behind the Aravalli hills from your doorstep.",
+      "details": [
+        {
+          "label": "Guests",
+          "value": "2 adults"
+        },
+        {
+          "label": "Plan",
+          "value": "Breakfast included"
+        },
+        {
+          "label": "View",
+          "value": "Udai Sagar lake"
+        }
+      ]
+    },
+    {
+      "name": "Pool View Cottage",
+      "count": "One cottage",
+      "photo": "/assets/cottages.jpg",
+      "price": "₹5,000",
+      "text": "The elemental cottage closest to the infinity pool, for guests who want to step straight from the bedroom into the water.",
+      "details": [
+        {
+          "label": "Guests",
+          "value": "2 adults"
+        },
+        {
+          "label": "Plan",
+          "value": "Breakfast included"
+        },
+        {
+          "label": "View",
+          "value": "Infinity pool"
+        }
+      ]
+    },
+    {
+      "name": "Family Suite",
+      "count": "One suite",
+      "photo": "/assets/villa-room.jpg",
+      "price": "₹8,500",
+      "text": "A stone-finish suite with a double bed and bunk beds, made for families travelling together.",
+      "details": [
+        {
+          "label": "Guests",
+          "value": "3 adults, up to 4"
+        },
+        {
+          "label": "Beds",
+          "value": "Double bed + bunk beds"
+        },
+        {
+          "label": "Plan",
+          "value": "Breakfast included"
+        }
+      ]
+    }
+  ],
+  "buyout": {
+    "label": "The whole resort",
+    "title": "Make it yours",
+    "text": "For family reunions, friends' getaways, weddings and private groups.",
+    "options": [
+      {
+        "title": "All five cottages",
+        "price": "₹40,000",
+        "per": "per night",
+        "text": "Every cottage and the Family Suite for your group, with all meals."
+      },
+      {
+        "title": "Full property buyout",
+        "price": "₹1,20,000",
+        "per": "per day",
+        "text": "All room keys plus the garden and function area, exclusively yours."
+      }
+    ]
+  },
+  "notes": [
+    {
+      "title": "Included",
+      "items": [
+        "Breakfast every morning",
+        "Infinity pool, 8–11 AM and 4:30–7:30 PM",
+        "Free parking and Wi-Fi",
+        "Guest App: menu, food orders, timings"
+      ]
+    },
+    {
+      "title": "Meal plans",
+      "items": [
+        "Breakfast + lunch or dinner: + ₹1,600",
+        "All meals: + ₹2,600",
+        "Family Suite: + ₹2,400 / + ₹3,900",
+        "Per room, per night"
+      ]
+    },
+    {
+      "title": "Good to know",
+      "items": [
+        "Extra adult from ₹1,700 with breakfast",
+        "Child (7–17 years) ₹1,000",
+        "Airport and railway transfers on request",
+        "GST: 5% up to ₹7,500 a night, 18% above"
+      ]
+    }
+  ]
+}

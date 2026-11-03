@@ -1,0 +1,32 @@
+{
+  "seo": {
+    "title": "Contact & Location | The Udaisarovar, Lakadwas, Udaipur",
+    "description": "Reservations on WhatsApp +91 88298 09555. The Udaisarovar, near Udaisagar Lake, Lakadwas, Udaipur 313003. Directions, Guest App and B2B rates for travel partners."
+  },
+  "hero": {
+    "image": "/assets/goldenhour.jpg",
+    "label": "Contact",
+    "title": "We'd love to host you",
+    "photo_position": "center 60%"
+  },
+  "title": "Reservations & directions",
+  "text": "Message us on WhatsApp for the quickest reply, or book online for instant confirmation.",
+  "guest_app": {
+    "label": "Staying with us?",
+    "title": "The Guest App",
+    "text": "Everything for your stay in one place. Scan the QR code at reception or open it on your phone.",
+    "features": [
+      "Live menu and food orders to your cottage",
+      "Day timeline and pool timings",
+      "Experiences, day trips and events",
+      "House rules"
+    ],
+    "note": "Your JDG guest number gets you 10% off when you come back.",
+    "photo": "/assets/cottage-earth.jpg"
+  },
+  "partners": {
+    "label": "Travel partners",
+    "title": "Travel agents and tour operators: ask for our B2B rates",
+    "text": "Packages with meals, sightseeing cabs and transfers arranged in-house."
+  }
+}

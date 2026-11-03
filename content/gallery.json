@@ -1,0 +1,154 @@
+{
+  "seo": {
+    "title": "Photo Gallery | The Udaisarovar, Lakeside Resort Udaipur",
+    "description": "Photos of The Udaisarovar: cottages, the infinity pool on Udai Sagar, dining, bonfire nights, lakeside weddings and events."
+  },
+  "title": "Life at the lake",
+  "groups": [
+    {
+      "title": "The resort",
+      "photos": [
+        {
+          "image": "/assets/p-udaisarovar.jpg",
+          "caption": "Cottages on the lawn"
+        },
+        {
+          "image": "/assets/cottage-earth.jpg",
+          "caption": "Cottage Earth at dusk"
+        },
+        {
+          "image": "/assets/cottages.jpg",
+          "caption": "The cottages above the lake"
+        },
+        {
+          "image": "/assets/room.jpg",
+          "caption": "Cottage bedroom"
+        },
+        {
+          "image": "/assets/villa-room.jpg",
+          "caption": "Family Suite"
+        },
+        {
+          "image": "/assets/aerial.jpg",
+          "caption": "From above"
+        },
+        {
+          "image": "/assets/lawn.jpg",
+          "caption": "Lawns and tents"
+        }
+      ]
+    },
+    {
+      "title": "Pool & lake",
+      "photos": [
+        {
+          "image": "/assets/pool-lake2.jpg",
+          "caption": "Infinity pool"
+        },
+        {
+          "image": "/assets/pool.jpg",
+          "caption": "Pool meeting the lake"
+        },
+        {
+          "image": "/assets/goldenhour.jpg",
+          "caption": "Golden hour"
+        },
+        {
+          "image": "/assets/palms.jpg",
+          "caption": "Palms by the water"
+        },
+        {
+          "image": "/assets/camping.jpg",
+          "caption": "Camping on the shore"
+        }
+      ]
+    },
+    {
+      "title": "Dining",
+      "photos": [
+        {
+          "image": "/assets/ev-dining.jpg",
+          "caption": "Candle-lit dinner"
+        },
+        {
+          "image": "/assets/dining.jpg",
+          "caption": "Home-style plates"
+        },
+        {
+          "image": "/assets/bbq.jpg",
+          "caption": "Live BBQ"
+        },
+        {
+          "image": "/assets/brunch.jpg",
+          "caption": "Lawn brunch"
+        },
+        {
+          "image": "/assets/ev-table.jpg",
+          "caption": "Table setting"
+        },
+        {
+          "image": "/assets/night-dining.jpg",
+          "caption": "Dinner by the fire"
+        }
+      ]
+    },
+    {
+      "title": "Experiences",
+      "photos": [
+        {
+          "image": "/assets/bonfire.jpg",
+          "caption": "Bonfire night"
+        },
+        {
+          "image": "/assets/movienight.jpg",
+          "caption": "Cinema under the stars"
+        },
+        {
+          "image": "/assets/horse.jpg",
+          "caption": "Horse riding"
+        },
+        {
+          "image": "/assets/ev-bonfire.jpg",
+          "caption": "Evenings together"
+        }
+      ]
+    },
+    {
+      "title": "Weddings & events",
+      "photos": [
+        {
+          "image": "/assets/ev-wedding.jpg",
+          "caption": "Wedding mandap"
+        },
+        {
+          "image": "/assets/wedding-couple.jpg",
+          "caption": "At the cottages"
+        },
+        {
+          "image": "/assets/mandap.jpg",
+          "caption": "Floral mandap"
+        },
+        {
+          "image": "/assets/wedding-stage.jpg",
+          "caption": "Wedding stage"
+        },
+        {
+          "image": "/assets/holi.jpg",
+          "caption": "Lakeside Holi"
+        },
+        {
+          "image": "/assets/ev-dj.jpg",
+          "caption": "New Year's Eve"
+        },
+        {
+          "image": "/assets/ev-birthday.jpg",
+          "caption": "Birthday décor"
+        },
+        {
+          "image": "/assets/ev-couple.jpg",
+          "caption": "Couple portraits"
+        }
+      ]
+    }
+  ]
+}

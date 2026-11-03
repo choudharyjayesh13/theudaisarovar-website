@@ -1,0 +1,180 @@
+{
+  "seo": {
+    "title": "Best Lakeside Hotel in Udaipur | The Udaisarovar – Resort & Cottages from ₹4,500",
+    "description": "The Udaisarovar is a private lakeside resort on Udai Sagar, Udaipur: lake-view cottages from ₹4,500 with breakfast, an infinity pool, bonfire camping, home-style food and full-property buyouts. Book direct."
+  },
+  "hero": {
+    "video": "/assets/video/hero.mp4",
+    "photo": "/assets/pool-lake2.jpg",
+    "phone_photo": "/assets/goldenhour.jpg",
+    "title": "A private retreat on the shores of",
+    "title_italic": "Udai Sagar",
+    "subtitle": "Five cottages, an infinity pool that meets the lake and wide lawns, about twenty minutes from the City of Lakes.",
+    "rooms_from": "₹4,500"
+  },
+  "welcome": {
+    "label": "Welcome to The Udaisarovar",
+    "title": "Where the lake is your only neighbour",
+    "text": "A boutique resort right at the water's edge of Udai Sagar. Just five bedrooms, an infinity pool that melts into the lake, sunrise over the Aravallis and evenings by the bonfire. Made for couples, families, small groups and celebrations."
+  },
+  "facts": [
+    {
+      "number": "5",
+      "label": "Cottages & suite"
+    },
+    {
+      "number": "20 min",
+      "label": "From Udaipur city"
+    },
+    {
+      "number": "21,556",
+      "label": "Sq ft lakeside lawn"
+    },
+    {
+      "number": "400–600",
+      "label": "Guests for events"
+    }
+  ],
+  "reel": {
+    "label": "A day at The Udaisarovar",
+    "title": "From sunrise to the last ember",
+    "photos": [
+      {
+        "image": "/assets/palms.jpg",
+        "caption": "Morning by the water"
+      },
+      {
+        "image": "/assets/pool.jpg",
+        "caption": "A swim at the edge"
+      },
+      {
+        "image": "/assets/ev-brunch.jpg",
+        "caption": "Brunch on the lawn"
+      },
+      {
+        "image": "/assets/horse.jpg",
+        "caption": "A ride across the lawns"
+      },
+      {
+        "image": "/assets/goldenhour.jpg",
+        "caption": "Golden hour"
+      },
+      {
+        "image": "/assets/cottage-earth.jpg",
+        "caption": "Lights on at dusk"
+      },
+      {
+        "image": "/assets/bonfire.jpg",
+        "caption": "Stories by the fire"
+      },
+      {
+        "image": "/assets/movienight.jpg",
+        "caption": "Cinema under the stars"
+      }
+    ]
+  },
+  "stay": {
+    "label": "Stay",
+    "title": "Four elemental cottages and a family suite",
+    "text": "Air, Water, Earth and Fire: each cottage faces the lake or the pool, with breakfast by the water included in every stay.",
+    "photo": "/assets/p-udaisarovar.jpg",
+    "small_photo": "/assets/room.jpg"
+  },
+  "experiences": {
+    "label": "Experiences",
+    "title": "Days by the pool, nights under the stars",
+    "tiles": [
+      {
+        "image": "/assets/pool.jpg",
+        "title": "Infinity pool",
+        "text": "The pool edge meets the lake.",
+        "price": "",
+        "link": "experiences.html#pool"
+      },
+      {
+        "image": "/assets/camping.jpg",
+        "title": "Lakeside camping",
+        "text": "Tents on the shore, bonfire and music.",
+        "price": "₹3,000 per tent for two",
+        "link": "experiences.html#camping"
+      },
+      {
+        "image": "/assets/bonfire.jpg",
+        "title": "Bonfire nights",
+        "text": "Music on the lawn, lake lights across the water.",
+        "price": "",
+        "link": "experiences.html#bonfire"
+      },
+      {
+        "image": "/assets/movienight.jpg",
+        "title": "Cinema under the stars",
+        "text": "Open-air screenings from 9 PM.",
+        "price": "",
+        "link": "experiences.html#movies"
+      },
+      {
+        "image": "/assets/horse.jpg",
+        "title": "Horse riding",
+        "text": "Across the lakeside lawns.",
+        "price": "",
+        "link": "experiences.html#horse"
+      },
+      {
+        "image": "/assets/x-citypalace.jpg",
+        "title": "Udaipur & Mewar",
+        "text": "City tours, Nathdwara and Chittorgarh by cab.",
+        "price": "",
+        "link": "experiences.html#sightseeing"
+      }
+    ]
+  },
+  "dining": {
+    "label": "Lake City Café",
+    "title": "Home-style vegetarian, served by the water",
+    "text": "Fresh paneer, slow-cooked dals, hot chapatis and seasonal vegetables. Breakfast on the lawn, candle-lit dinners at the lake's edge and live BBQ nights.",
+    "hours": "Open daily 8:30 AM – 10:30 PM",
+    "photo": "/assets/ev-dining.jpg"
+  },
+  "events": {
+    "label": "Weddings & Events",
+    "title": "Celebrate on the shores of the lake",
+    "text": "A 21,556 sq ft lawn with three settings, the garden, the lakefront shore and the poolside deck, for weddings, Holi, New Year's Eve and private parties of 400 to 600 guests.",
+    "price_line": "Take the whole resort from ₹1,20,000 a day.",
+    "photo": "/assets/dj-night.jpg"
+  },
+  "journal": {
+    "label": "Journal",
+    "title": "Stories from the lake",
+    "stories": [
+      {
+        "image": "/assets/pool-lake2.jpg",
+        "tag": "Stay · Packages",
+        "title": "A luxury lakeside retreat in Udaipur",
+        "link": "journal/luxury-lakeside-retreat-udaipur.html"
+      },
+      {
+        "image": "/assets/goldenhour.jpg",
+        "tag": "Photo guide",
+        "title": "The seven most photographed spots at the lake",
+        "link": "journal/best-instagram-spots-udaipur.html"
+      },
+      {
+        "image": "/assets/ev-holi.jpg",
+        "tag": "Events",
+        "title": "The parties we throw by the lake",
+        "link": "journal/lakeside-weddings-events-udaipur.html"
+      }
+    ]
+  },
+  "instagram": {
+    "label": "Follow the lake life",
+    "photos": [
+      "/assets/goldenhour.jpg",
+      "/assets/cottage-earth.jpg",
+      "/assets/palms.jpg",
+      "/assets/pool.jpg",
+      "/assets/ev-wedding.jpg",
+      "/assets/bonfire.jpg"
+    ]
+  }
+}
