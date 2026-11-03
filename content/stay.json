@@ -34,9 +34,9 @@
   "rooms": [
     {
       "name": "Lake View Cottage",
-      "count": "Three cottages",
+      "count": "Four cottages",
       "photo": "/assets/room.jpg",
-      "price": "₹4,500",
+      "price": "₹9,500",
       "text": "Three of the elemental cottages face Udai Sagar directly. Wake up to the lake and watch the sun set behind the Aravalli hills from your doorstep.",
       "details": [
         {
@@ -57,7 +57,7 @@
       "name": "Pool View Cottage",
       "count": "One cottage",
       "photo": "/assets/cottages.jpg",
-      "price": "₹5,000",
+      "price": "₹9,500",
       "text": "The elemental cottage closest to the infinity pool, for guests who want to step straight from the bedroom into the water.",
       "details": [
         {
