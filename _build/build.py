@@ -178,6 +178,12 @@ def header(active, over=False):
 """
 
 
+def book_hidden():
+    """Hidden fields carrying the booking link's own parameters (e.g. Asiatech's hotel token)."""
+    from urllib.parse import urlsplit, parse_qsl
+    return "".join(f'<input type="hidden" name="{e(k)}" value="{e(v)}">' for k, v in parse_qsl(urlsplit(BOOK).query))
+
+
 def short_address():
     parts = [p.strip() for p in CT["address"].split(",")]
     pin = re.findall(r"\d{6}", CT["address"])
@@ -327,7 +333,7 @@ def home():
 </section>
 
 <div class="bookbar" id="book-online">
-  <form id="jd-book" action="{e(BOOK)}" method="get" aria-label="Check availability">
+  <form id="jd-book" action="{e(BOOK.split('?')[0])}" method="get" aria-label="Check availability">{book_hidden()}
     <label>Check-in<input type="date" name="in" required></label>
     <label>Check-out<input type="date" name="out" required></label>
     <label>Adults<select name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label>
@@ -929,6 +935,8 @@ def main():
         elif os.path.exists(src):
             shutil.copy2(src, out)
     for fn, path, seo, image, body, over, extra in pages():
+        if "myjdgroup" not in BOOK:  # rates now come from the channel manager, not JD One
+            body = re.sub(r' data-t="[^"]*"', "", body)
         page = head(seo, path, image, extra) + header(fn, over) + motion(body) + footer()
         open(os.path.join(out, fn), "w", encoding="utf-8").write(page)
         if "--root" in sys.argv:
