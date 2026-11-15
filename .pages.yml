@@ -626,3 +626,87 @@ content:
           - { name: label, label: "Small gold line", type: string }
           - { name: title, label: Heading, type: string }
           - { name: text, label: Text, type: text }
+
+  # ------------------------------------------------------------ GUEST GALLERY (explore.html)
+  - name: explore
+    label: "✨ Guest gallery & stay planner (explore)"
+    type: file
+    path: content/explore.json
+    format: json
+    fields:
+      - name: seo
+        label: Link preview text
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+      - name: intro
+        label: Welcome screen
+        type: object
+        fields:
+          - { name: greeting, label: "Greeting (खम्मा घणी)", type: string }
+          - { name: welcome, label: "Small line", type: string }
+          - { name: brand, label: "Brand name", type: string }
+          - { name: tagline, label: "Line under brand", type: string }
+          - { name: button, label: "Button text", type: string }
+      - { name: choose_title, label: "Choose-property heading", type: string }
+      - { name: whatsapp_number, label: "WhatsApp Business number (guest messages come here)", type: string, required: true }
+      - { name: note, label: "Reassurance note (final rates can be discussed)", type: text }
+      - { name: occasions, label: "Occasion choices", type: string, list: true }
+      - { name: budgets, label: "Budget ranges", type: string, list: true }
+      - name: properties
+        label: Properties
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Short code (UDS, GH) — used in the link and reference", type: string }
+          - { name: name, label: Name, type: string }
+          - { name: short, label: "One line", type: string }
+          - { name: location, label: Location, type: string }
+          - { name: cover, label: "Cover photo", type: image, options: { media: photos } }
+          - { name: intro, label: "About the property", type: text }
+          - name: facts
+            label: "Numbers (max 4)"
+            type: object
+            list: { max: 4 }
+            fields:
+              - { name: number, label: Number, type: string }
+              - { name: label, label: Label, type: string }
+          - name: galleries
+            label: Photo categories
+            type: object
+            list: true
+            fields:
+              - { name: title, label: "Category (e.g. Property view)", type: string }
+              - name: photos
+                label: Photos
+                type: object
+                list: true
+                fields:
+                  - { name: image, label: Photo, type: image, options: { media: photos } }
+                  - { name: caption, label: Caption, type: string }
+          - name: stay_options
+            label: Stay options
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: detail, label: "Small line", type: string }
+              - { name: price, label: "Price in ₹ (0 = on request)", type: number }
+              - { name: unit, label: "per (night / day)", type: string }
+              - { name: guests, label: "Guests per room/unit (0 = whole property)", type: number }
+          - name: meals
+            label: Meal options (first one is the default)
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: price, label: "Extra ₹ per room per night (0 = included / on request)", type: number }
+          - name: experiences
+            label: Experiences
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: price, label: "Price in ₹ (0 = on request / included)", type: number }
+              - { name: unit, label: "per tent / per person / per cab / included / on request", type: string }

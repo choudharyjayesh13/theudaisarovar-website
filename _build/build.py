@@ -893,6 +893,104 @@ def pages():
         yield fn, fn, d["seo"], image, fnc(), False, ""
 
 
+# ------------------------------------------------------------------ guest gallery & stay planner
+def explore_page():
+    X = C("explore")
+    I = X["intro"]
+    lotus = e(img(B["lotus_logo"]))
+    v = hashlib.md5(open(os.path.join(ROOT, "assets/css/explore.css"), "rb").read() + open(os.path.join(ROOT, "assets/js/explore.js"), "rb").read()).hexdigest()[:8]
+    back = '<button class="back" aria-label="Back"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>'
+    top = f'<div class="top">{back}<span class="mark"><img src="{lotus}" alt="">JD STAYS</span><span class="steps"></span></div>'
+    data = json.dumps(X, ensure_ascii=False).replace("</", "<\\/")
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>{e(X['seo']['title'])}</title>
+<meta name="description" content="{e(X['seo']['description'])}">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="{e(I['greeting'])} · {e(I['brand'])}">
+<meta property="og:description" content="{e(X['seo']['description'])}">
+<meta property="og:image" content="{SITE}{img(X['properties'][0]['cover'])}">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="assets/brand/favicon.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/explore.css?v={v}">
+</head>
+<body>
+<div class="app">
+
+<section class="screen on" id="s-intro" aria-label="Welcome">
+  <span class="corner a" aria-hidden="true"></span><span class="corner b" aria-hidden="true"></span>
+  <div class="in">
+    <div class="bloom" aria-hidden="true">{RING}<img src="{lotus}" alt=""></div>
+    <h1 class="hello" lang="hi">{e(I['greeting'])}</h1>
+    <div class="wel"><small>{e(I['welcome'])}</small><b>{e(I['brand'])}</b><span>{e(I['tagline'])}</span></div>
+    <button class="btn enter" id="enter">{e(I['button'])}</button>
+  </div>
+</section>
+
+<section class="screen" id="s-choose" aria-label="Choose the property">
+  {top}
+  <div class="pad">
+    <span class="label">Step 1 · Our stays</span>
+    <h2 style="margin-top:10px">{e(X['choose_title'])}</h2>
+    <div class="cards" id="props"></div>
+  </div>
+</section>
+
+<section class="screen" id="s-property" aria-label="Property">
+  {top}
+  <div class="hero" id="p-hero"></div>
+  <div class="pad" style="padding-bottom:0"><p class="lead" id="p-intro" style="margin-top:0"></p></div>
+  <div style="padding:0 22px"><div class="facts" id="p-facts"></div></div>
+  <div class="tabs" id="p-tabs" role="tablist"></div>
+  <div class="gal" id="p-gal"></div>
+  <p class="count" id="p-count"></p>
+  <div class="sticky-cta"><button class="btn" id="to-plan">Plan my stay here</button></div>
+</section>
+
+<section class="screen" id="s-plan" aria-label="Plan your stay">
+  {top}
+  <div class="pad" style="padding-bottom:0"><span class="label">Step 2 · Design your own stay</span><h2 id="pl-title" style="margin-top:10px"></h2></div>
+  <div class="q"><h3>What's the occasion?</h3><div class="chips" id="pl-occ"></div></div>
+  <div class="q"><h3>When &amp; how many?</h3>
+    <div class="row"><label class="field">Check-in<input type="date" id="pl-in"></label><label class="field">Check-out<input type="date" id="pl-out"></label></div>
+    <div class="row">
+      <div class="field">Adults<div class="stepper"><button data-step="adults" data-d="-1" aria-label="Fewer adults">−</button><b id="pl-ad">2</b><button data-step="adults" data-d="1" aria-label="More adults">+</button></div></div>
+      <div class="field">Children<div class="stepper"><button data-step="kids" data-d="-1" aria-label="Fewer children">−</button><b id="pl-kd">0</b><button data-step="kids" data-d="1" aria-label="More children">+</button></div></div>
+    </div>
+  </div>
+  <div class="q"><h3>Where would you like to stay?</h3><p class="hint">Starting rates per night, before GST</p><div class="opts" id="pl-stay"></div></div>
+  <div class="q"><h3>Meals</h3><div class="opts" id="pl-meal"></div></div>
+  <div class="q"><h3>Add experiences</h3><p class="hint">Pick as many as you like</p><div class="chips" id="pl-exp"></div></div>
+  <div class="sticky-cta" style="margin-top:24px"><button class="btn" id="to-est" disabled>Choose a stay option</button></div>
+</section>
+
+<section class="screen" id="s-estimate" aria-label="Your estimate">
+  {top}
+  <div class="pad" style="padding-bottom:0"><span class="label">Step 3 · Your personal package</span></div>
+  <div class="summary"><h3 id="es-name"></h3><dl id="es-dl"></dl><div class="est" id="es-total"></div></div>
+  <div class="q"><h3>Does this fit your budget?</h3><div class="chips" id="es-fit"></div></div>
+  <div class="q"><h3>Your expected budget</h3><p class="hint">Optional · helps us offer the best package</p><div class="chips" id="es-bud"></div></div>
+  <div class="q"><label class="field">Your name (optional)<input type="text" id="es-guest" autocomplete="name"></label></div>
+  <div class="assure">{e(X['note'])}</div>
+  <div class="sticky-cta" style="margin-top:18px"><button class="btn wa" id="send">Yes, I'm interested · WhatsApp</button><p class="ref" id="es-ref"></p></div>
+  <div class="foot"><img src="{e(img(B['footer_logo']))}" alt="JD Stays &amp; Hospitality">The Udaisarovar · The Glass House · Udaipur</div>
+</section>
+
+</div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo"><button class="x" aria-label="Close">×</button><button class="nav prev" aria-label="Previous photo">‹</button><img src="" alt=""><p></p><button class="nav next" aria-label="Next photo">›</button></div>
+<script>window.EXPLORE={data};</script>
+<script src="assets/js/explore.js?v={v}"></script>
+</body>
+</html>
+"""
+
+
 # ------------------------------------------------------------------ output
 COPY = ["assets", "journal", "brochure.pdf", "robots.txt", "sitemap.xml", "CNAME"]
 
@@ -942,6 +1040,11 @@ def main():
         if "--root" in sys.argv:
             open(os.path.join(ROOT, fn), "w", encoding="utf-8").write(page)
         print("built", fn)
+    page = explore_page()
+    open(os.path.join(out, "explore.html"), "w", encoding="utf-8").write(page)
+    if "--root" in sys.argv:
+        open(os.path.join(ROOT, "explore.html"), "w", encoding="utf-8").write(page)
+    print("built explore.html")
     if "--no-resize" not in sys.argv:
         shrink_images(os.path.join(out, "assets"))
 
