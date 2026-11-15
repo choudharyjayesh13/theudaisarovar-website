@@ -926,7 +926,7 @@ def explore_page():
 <section class="screen on" id="s-intro" aria-label="Welcome">
   <span class="corner a" aria-hidden="true"></span><span class="corner b" aria-hidden="true"></span>
   <div class="stage">
-    <div class="logo-wrap" aria-hidden="true"><span class="glow"></span><div class="bloom big">{RING}<img src="{lotus}" alt=""></div></div>
+    <div class="logo-wrap" aria-hidden="true"><span class="glow"></span><div class="bloom big"><span class="spread">{RING}</span><img src="{lotus}" alt=""></div></div>
     <h1 class="hello" lang="hi" data-text="{e(I['greeting'])}">{e(I['greeting'])}</h1>
     <div class="wel"><small>{e(I['welcome'])}</small><b>{e(I['brand'])}</b><span>{e(I['tagline'])}</span></div>
     <button class="btn enter" id="enter">{e(I['button'])}</button>
