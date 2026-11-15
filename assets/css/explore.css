@@ -64,7 +64,7 @@ h2{font-size:2.1rem}
   font-size:clamp(3rem,15vw,4.8rem);line-height:1.3;letter-spacing:.04em;color:var(--ink);transform:translateY(70vh);opacity:0;
   transition:transform 1.2s cubic-bezier(.16,1,.3,1),opacity .6s}
 #s-intro.hi .hello{transform:none;opacity:1}
-.hello .g{display:inline-block;color:#D9CDB6;transition:color .35s,transform .35s,text-shadow .5s}
+.hello .g{display:inline-block;padding:.32em .08em .14em;margin:-.32em -.08em -.14em;color:#D9CDB6;transition:color .35s,transform .35s,text-shadow .5s}
 .hello .g.on{background:linear-gradient(135deg,#9A6E2A 0%,#B8924A 30%,#D9B26A 52%,#B8924A 74%,#8A672A 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;transform:translateY(-3px) scale(1.04);animation:tick .5s ease-out}
 .hello .g.done{transform:none}
 @keyframes tick{0%{transform:translateY(8px) scale(.9)}60%{transform:translateY(-6px) scale(1.1)}100%{transform:translateY(-4px) scale(1.06)}}
