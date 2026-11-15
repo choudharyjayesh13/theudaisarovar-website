@@ -917,7 +917,7 @@ def explore_page():
 <link rel="icon" type="image/png" href="assets/brand/favicon.png">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Tiro+Devanagari+Hindi&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/explore.css?v={v}">
 </head>
 <body>
@@ -925,9 +925,9 @@ def explore_page():
 
 <section class="screen on" id="s-intro" aria-label="Welcome">
   <span class="corner a" aria-hidden="true"></span><span class="corner b" aria-hidden="true"></span>
-  <div class="in">
-    <div class="bloom" aria-hidden="true">{RING}<img src="{lotus}" alt=""></div>
-    <h1 class="hello" lang="hi">{e(I['greeting'])}</h1>
+  <div class="stage">
+    <div class="logo-wrap" aria-hidden="true"><span class="glow"></span><div class="bloom big">{RING}<img src="{lotus}" alt=""></div></div>
+    <h1 class="hello" lang="hi" data-text="{e(I['greeting'])}">{e(I['greeting'])}</h1>
     <div class="wel"><small>{e(I['welcome'])}</small><b>{e(I['brand'])}</b><span>{e(I['tagline'])}</span></div>
     <button class="btn enter" id="enter">{e(I['button'])}</button>
   </div>
