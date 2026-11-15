@@ -28,14 +28,8 @@
   (function intro() {
     var sc = $('#s-intro'), h = $('.hello'), text = h.dataset.text || h.textContent;
     /* split into whole letters (conjuncts like म्मा stay together) so each lights up on its own */
-    var groups = [], chars = Array.from(text);
-    chars.forEach(function (c, i) {
-      var prev = chars[i - 1];
-      /* a new letter starts at a consonant or vowel, unless it follows a halant (्), which joins conjuncts like म्मा */
-      var starts = /[\u0904-\u0939\u0958-\u0961\u0972-\u097F]/.test(c) && prev !== '\u094D';
-      if (!groups.length || c === ' ' || prev === ' ' || (starts && prev !== undefined)) groups.push(c); else groups[groups.length - 1] += c;
-    });
-    h.innerHTML = groups.map(function (g) { return g === ' ' ? '&nbsp;' : '<span class="g">' + esc(g) + '</span>'; }).join('');
+    var groups = text.split(/(\s+)/).filter(function (w) { return w.length; });   /* whole words: खम्मा, then घणी */
+    h.innerHTML = groups.map(function (g) { return /^\s+$/.test(g) ? '&nbsp;' : '<span class="g">' + esc(g) + '</span>'; }).join('');
     h.setAttribute('aria-label', text);
     var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
     var at = function (ms, f) { setTimeout(f, still ? 0 : ms); };
@@ -43,10 +37,10 @@
     at(150, function () { sc.classList.add('lit'); });          // lotus glides up from below to the centre and blooms (loading)
     at(3200, function () { sc.classList.add('up'); });          // ...holds, then rises to the top
     at(4400, function () { sc.classList.add('hi'); });          // खम्मा घणी climbs from below
-    gs.forEach(function (g, i) {                                 // ...and lights up: tak, tak, tak
-      at(5500 + i * 450, function () { g.classList.add('on'); setTimeout(function () { g.classList.add('done'); }, 420); });
+    gs.forEach(function (g, i) {                                 // ...and lights up word by word: खम्मा … घणी
+      at(5500 + i * 750, function () { g.classList.add('on'); setTimeout(function () { g.classList.add('done'); }, 420); });
     });
-    var end = 5500 + gs.length * 450 + 900;   // short pause, then the rest
+    var end = 5500 + gs.length * 750 + 900;   // short pause, then the rest
     at(end, function () { sc.classList.add('shine', 'done'); }); // welcome + Enter
   })();
   $('#enter').addEventListener('click', function () { show(S.prop ? 'property' : 'choose'); });
