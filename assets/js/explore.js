@@ -40,13 +40,13 @@
     var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
     var at = function (ms, f) { setTimeout(f, still ? 0 : ms); };
     var gs = h.querySelectorAll('.g');
-    at(300, function () { sc.classList.add('lit'); });          // lotus blooms big with a soft glow
-    at(2300, function () { sc.classList.add('up'); });          // lotus rises
-    at(2900, function () { sc.classList.add('hi'); });          // खम्मा घणी climbs from below
+    at(150, function () { sc.classList.add('lit'); });          // lotus glides up from below to the centre and blooms (loading)
+    at(3200, function () { sc.classList.add('up'); });          // ...holds, then rises to the top
+    at(4400, function () { sc.classList.add('hi'); });          // खम्मा घणी climbs from below
     gs.forEach(function (g, i) {                                 // ...and lights up: tak, tak, tak
-      at(3900 + i * 380, function () { g.classList.add('on'); setTimeout(function () { g.classList.add('done'); }, 420); });
+      at(5500 + i * 450, function () { g.classList.add('on'); setTimeout(function () { g.classList.add('done'); }, 420); });
     });
-    var end = 3900 + gs.length * 380 + 300;
+    var end = 5500 + gs.length * 450 + 900;   // short pause, then the rest
     at(end, function () { sc.classList.add('shine', 'done'); }); // welcome + Enter
   })();
   $('#enter').addEventListener('click', function () { show(S.prop ? 'property' : 'choose'); });

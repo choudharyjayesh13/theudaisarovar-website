@@ -37,7 +37,8 @@ h2{font-size:2.1rem}
 /* ---------- 0. welcome: lotus blooms big, rises; खम्मा घणी climbs from below and lights up syllable by syllable ---------- */
 #s-intro{position:relative;background:#fff;overflow:hidden;text-align:center}
 .stage{position:relative;height:100vh;height:100svh;min-height:560px}
-.logo-wrap{position:absolute;left:50%;top:50%;width:220px;height:220px;margin:-110px 0 0 -110px;transition:transform 1.1s cubic-bezier(.65,0,.25,1)}
+.logo-wrap{position:absolute;left:50%;top:50%;width:220px;height:220px;margin:-110px 0 0 -110px;transform:translateY(16vh);opacity:0;transition:transform 1.4s cubic-bezier(.65,0,.25,1),opacity 1s ease}
+#s-intro.lit .logo-wrap{transform:none;opacity:1}
 .glow{position:absolute;inset:-30px;border-radius:50%;background:radial-gradient(circle,rgba(244,211,144,.55) 0%,rgba(244,211,144,0) 65%);opacity:0;transform:scale(.4);transition:opacity 1.2s ease,transform 1.6s ease}
 .bloom{position:relative;width:150px;height:150px}
 .bloom.big{width:220px;height:220px}
@@ -59,12 +60,12 @@ h2{font-size:2.1rem}
 #s-intro.up .ring{opacity:0;transition:opacity .6s}
 #s-intro.up .glow{opacity:.55}
 /* step 3: खम्मा घणी climbs from the bottom of the screen */
-.hello{position:absolute;left:0;right:0;top:41%;padding:0 16px;margin:0;font-family:"Tiro Devanagari Hindi",var(--serif),serif;font-weight:400;
-  font-size:clamp(3.4rem,17vw,5.4rem);line-height:1.25;letter-spacing:.01em;color:var(--ink);transform:translateY(70vh);opacity:0;
+.hello{position:absolute;left:0;right:0;top:41%;padding:0 16px;margin:0;font-family:"Noto Serif Devanagari",var(--serif),serif;font-weight:200;
+  font-size:clamp(3rem,15vw,4.8rem);line-height:1.3;letter-spacing:.04em;color:var(--ink);transform:translateY(70vh);opacity:0;
   transition:transform 1.2s cubic-bezier(.16,1,.3,1),opacity .6s}
 #s-intro.hi .hello{transform:none;opacity:1}
-.hello .g{display:inline-block;color:#CDBFA6;transition:color .35s,transform .35s,text-shadow .5s}
-.hello .g.on{background:var(--jd-gold);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;transform:translateY(-4px) scale(1.06);animation:tick .45s ease-out}
+.hello .g{display:inline-block;color:#D9CDB6;transition:color .35s,transform .35s,text-shadow .5s}
+.hello .g.on{background:linear-gradient(135deg,#9A6E2A 0%,#B8924A 30%,#D9B26A 52%,#B8924A 74%,#8A672A 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;transform:translateY(-3px) scale(1.04);animation:tick .5s ease-out}
 .hello .g.done{transform:none}
 @keyframes tick{0%{transform:translateY(8px) scale(.9)}60%{transform:translateY(-6px) scale(1.1)}100%{transform:translateY(-4px) scale(1.06)}}
 #s-intro.shine .hello .g{animation:glint 3.4s ease-in-out infinite}
