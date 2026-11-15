@@ -68,6 +68,9 @@ h2{font-size:2.1rem}
 .hello .g.on{background:linear-gradient(135deg,#9A6E2A 0%,#B8924A 30%,#D9B26A 52%,#B8924A 74%,#8A672A 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;transform:translateY(-3px) scale(1.04);animation:tick .5s ease-out}
 .hello .g.done{transform:none}
 @keyframes tick{0%{transform:translateY(8px) scale(.9)}60%{transform:translateY(-6px) scale(1.1)}100%{transform:translateY(-4px) scale(1.06)}}
+/* closing the gap: खम्मा and घणी slide together until their top lines meet */
+.hello .sp{display:inline-block;width:.42em;transition:width 1.1s cubic-bezier(.65,0,.25,1)}
+#s-intro.join .hello .sp{width:.02em}
 #s-intro.shine .hello .g{animation:glint 3.4s ease-in-out infinite}
 @keyframes glint{0%,100%{background-position:100% 0}50%{background-position:0 0}}
 /* step 4: welcome + enter */
