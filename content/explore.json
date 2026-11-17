@@ -252,8 +252,8 @@
         },
         {
           "name": "Candlelight dinner by the lake",
-          "price": 0,
-          "unit": "on request",
+          "price": 999,
+          "unit": "per person",
           "included_in": [
             "Romantic Half Board",
             "All-Inclusive Signature Experience"
@@ -262,7 +262,7 @@
         {
           "name": "Outdoor games: cricket, badminton, football",
           "price": 0,
-          "unit": "on request",
+          "unit": "free, on request",
           "included_in": [
             "Romantic Half Board",
             "All-Inclusive Signature Experience"
@@ -270,7 +270,7 @@
         },
         {
           "name": "Bonfire & music",
-          "price": 4999,
+          "price": 499,
           "unit": "per evening",
           "included_in": [
             "All-Inclusive Signature Experience"
@@ -278,11 +278,13 @@
         },
         {
           "name": "Cinema under the stars",
-          "price": 0,
-          "unit": "on request",
+          "price": 249,
+          "unit": "per person",
           "included_in": [
             "All-Inclusive Signature Experience"
-          ]
+          ],
+          "group_min": 4,
+          "group_price": 499
         },
         {
           "name": "Lakeside camping",
@@ -294,16 +296,16 @@
         },
         {
           "name": "Yoga session with instructor",
-          "price": 0,
-          "unit": "on request",
+          "price": 399,
+          "unit": "per person",
           "included_in": [
             "All-Inclusive Signature Experience"
           ]
         },
         {
           "name": "Live barbecue OR self-cooking (choose one)",
-          "price": 0,
-          "unit": "on request",
+          "price": 699,
+          "unit": "per person",
           "included_in": [
             "All-Inclusive Signature Experience"
           ]
@@ -318,20 +320,20 @@
         },
         {
           "name": "Private live cooking by our chef",
-          "price": 0,
-          "unit": "on request",
+          "price": 999,
+          "unit": "per person",
           "included_in": []
         },
         {
           "name": "Udaipur city tour by cab",
-          "price": 2500,
-          "unit": "per cab",
+          "price": 0,
+          "unit": "on request, depends on the places",
           "included_in": []
         },
         {
           "name": "Decoration (birthday / anniversary)",
-          "price": 0,
-          "unit": "on request",
+          "price": 1299,
+          "unit": "per setup",
           "included_in": []
         }
       ],

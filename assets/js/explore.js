@@ -127,7 +127,10 @@
       return '<button class="opt' + (S.meal === i ? ' on' : '') + '" data-i="' + i + '"><b>' + esc(m.name) + '</b><span class="pr">' + (i === 0 && !m.price ? '' : priceText(m.price, 'per room / night')) + '</span></button>';
     }).join('');
     $('#pl-exp').innerHTML = p.experiences.map(function (x, i) {
-      var tag = incl(x) || x.unit === 'included' ? ' · included in your package' : (x.price ? ' · ' + inr(x.price) + ' ' + x.unit : ' · on request');
+      var tag = incl(x) || x.unit === 'included' ? ' · included in your package'
+        : /^free/.test(x.unit || '') ? ' · free'
+        : x.group_min && S.adults + S.kids >= x.group_min ? ' · ' + inr(x.group_price) + ' for your group'
+        : (x.price ? ' · ' + inr(x.price) + ' ' + x.unit : ' · on request');
       return '<button class="chip' + (S.exp[i] ? ' on' : '') + '" data-i="' + i + '">' + esc(x.name) + '<span style="color:var(--mute);font-size:.8rem">' + esc(tag) + '</span></button>';
     }).join('');
     checkPlan();
@@ -142,7 +145,7 @@
   document.querySelectorAll('[data-step]').forEach(function (b) {
     b.addEventListener('click', function () {
       var k = b.dataset.step, d = +b.dataset.d; S[k] = Math.max(k === 'adults' ? 1 : 0, Math.min(40, S[k] + d));
-      $('#pl-ad').textContent = S.adults; $('#pl-kd').textContent = S.kids;
+      $('#pl-ad').textContent = S.adults; $('#pl-kd').textContent = S.kids; if (S.prop) renderPlan();
     });
   });
   $('#pl-stay').addEventListener('click', function (e) { var o = e.target.closest('.opt'); if (!o) return; S.stay = +o.dataset.i; renderPlan(); });
@@ -163,9 +166,11 @@
     else if (m && !m.price && S.meal > 0) unknown = true;
     Object.keys(S.exp).forEach(function (i) {
       var x = p.experiences[i]; lines.push(x.name + (incl(x) ? ' (included)' : ''));
-      if (x.unit === 'included' || incl(x)) return;
+      if (x.unit === 'included' || /^free/.test(x.unit || '') || incl(x)) return;
+      var people = S.adults + S.kids;
+      if (x.group_min && people >= x.group_min) { total += x.group_price; return; }
       if (!x.price) { unknown = true; return; }
-      total += x.unit === 'per person' ? x.price * (S.adults + S.kids) : /tent/.test(x.unit) ? x.price * r : x.price;
+      total += x.unit === 'per person' ? x.price * people : /tent/.test(x.unit) ? x.price * r : x.price;
     });
     return { o: o, n: n, r: r, m: m, total: total, unknown: unknown, exps: lines };
   }
