@@ -226,9 +226,10 @@
           "includes": [
             "Comfortable cottage stay",
             "Breakfast, lunch, high tea & dinner",
-            "Candlelight dinner, bonfire, movie under the stars, camping",
-            "Live barbecue OR self-cooking (on request)",
-            "Yoga with instructor, pool, cricket, badminton, football",
+            "All resort activities included:",
+            "Candlelight dinner · Bonfire & music · Movie under the stars · Camping",
+            "Horse riding · Yoga with instructor · Pool · Cricket, badminton, football",
+            "Live barbecue OR self-cooking (choose one)",
             "Play area for kids"
           ]
         }
@@ -269,8 +270,8 @@
         },
         {
           "name": "Bonfire & music",
-          "price": 0,
-          "unit": "on request",
+          "price": 4999,
+          "unit": "per evening",
           "included_in": [
             "All-Inclusive Signature Experience"
           ]
@@ -300,7 +301,7 @@
           ]
         },
         {
-          "name": "Live barbecue or self-cooking",
+          "name": "Live barbecue OR self-cooking (choose one)",
           "price": 0,
           "unit": "on request",
           "included_in": [
@@ -311,7 +312,9 @@
           "name": "Horse riding",
           "price": 999,
           "unit": "per person",
-          "included_in": []
+          "included_in": [
+            "All-Inclusive Signature Experience"
+          ]
         },
         {
           "name": "Private live cooking by our chef",
