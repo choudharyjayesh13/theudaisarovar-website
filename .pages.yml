@@ -713,3 +713,4 @@ content:
               - { name: name, label: Name, type: string }
               - { name: price, label: "Price in ₹ (0 = on request / included)", type: number }
               - { name: unit, label: "per tent / per person / per cab / included / on request", type: string }
+              - { name: included_in, label: "Free in these packages (type the package names exactly)", type: string, list: true }

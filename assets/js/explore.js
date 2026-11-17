@@ -104,6 +104,7 @@
     if (!price) return '<strong>On request</strong>';
     return '<strong>' + inr(price) + '</strong>' + esc(unit && unit.indexOf('per') === 0 ? unit : 'per ' + (unit || 'night'));
   }
+  function incl(x) { var o = S.prop.stay_options[S.stay]; return !!(o && x.included_in && x.included_in.indexOf(o.name) >= 0); }
   function renderPlan() {
     var p = S.prop;
     $('#pl-title').textContent = 'Plan your stay at ' + p.name;
@@ -126,7 +127,7 @@
       return '<button class="opt' + (S.meal === i ? ' on' : '') + '" data-i="' + i + '"><b>' + esc(m.name) + '</b><span class="pr">' + (i === 0 && !m.price ? '' : priceText(m.price, 'per room / night')) + '</span></button>';
     }).join('');
     $('#pl-exp').innerHTML = p.experiences.map(function (x, i) {
-      var tag = x.unit === 'included' ? ' · included' : (x.price ? ' · ' + inr(x.price) : '');
+      var tag = incl(x) || x.unit === 'included' ? ' · included in your package' : (x.price ? ' · ' + inr(x.price) + ' ' + x.unit : ' · on request');
       return '<button class="chip' + (S.exp[i] ? ' on' : '') + '" data-i="' + i + '">' + esc(x.name) + '<span style="color:var(--mute);font-size:.8rem">' + esc(tag) + '</span></button>';
     }).join('');
     checkPlan();
@@ -161,10 +162,10 @@
     if (m && m.price && !/all meals/i.test(o.detail)) total += m.price * n * r;
     else if (m && !m.price && S.meal > 0) unknown = true;
     Object.keys(S.exp).forEach(function (i) {
-      var x = p.experiences[i]; lines.push(x.name);
-      if (x.unit === 'included') return;
+      var x = p.experiences[i]; lines.push(x.name + (incl(x) ? ' (included)' : ''));
+      if (x.unit === 'included' || incl(x)) return;
       if (!x.price) { unknown = true; return; }
-      total += x.unit === 'per person' ? x.price * S.adults : x.price;
+      total += x.unit === 'per person' ? x.price * (S.adults + S.kids) : /tent/.test(x.unit) ? x.price * r : x.price;
     });
     return { o: o, n: n, r: r, m: m, total: total, unknown: unknown, exps: lines };
   }

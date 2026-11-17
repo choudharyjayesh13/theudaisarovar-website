@@ -194,7 +194,7 @@
         {
           "name": "Cottage Comfort",
           "detail": "For 2 guests · per cottage, per night",
-          "price": 8499,
+          "price": 6999,
           "unit": "night",
           "guests": 2,
           "includes": [
@@ -206,7 +206,7 @@
         {
           "name": "Romantic Half Board",
           "detail": "For 2 guests · per cottage, per night",
-          "price": 9999,
+          "price": 8499,
           "unit": "night",
           "guests": 2,
           "includes": [
@@ -220,7 +220,7 @@
         {
           "name": "All-Inclusive Signature Experience",
           "detail": "For 2 guests · per cottage, per night",
-          "price": 12499,
+          "price": 10499,
           "unit": "night",
           "guests": 2,
           "includes": [
@@ -241,24 +241,95 @@
       ],
       "experiences": [
         {
-          "name": "Private live cooking",
+          "name": "Lunch or dinner (extra meal)",
+          "price": 800,
+          "unit": "per person",
+          "included_in": [
+            "Romantic Half Board",
+            "All-Inclusive Signature Experience"
+          ]
+        },
+        {
+          "name": "Candlelight dinner by the lake",
           "price": 0,
-          "unit": "on request"
+          "unit": "on request",
+          "included_in": [
+            "Romantic Half Board",
+            "All-Inclusive Signature Experience"
+          ]
+        },
+        {
+          "name": "Outdoor games: cricket, badminton, football",
+          "price": 0,
+          "unit": "on request",
+          "included_in": [
+            "Romantic Half Board",
+            "All-Inclusive Signature Experience"
+          ]
+        },
+        {
+          "name": "Bonfire & music",
+          "price": 0,
+          "unit": "on request",
+          "included_in": [
+            "All-Inclusive Signature Experience"
+          ]
+        },
+        {
+          "name": "Cinema under the stars",
+          "price": 0,
+          "unit": "on request",
+          "included_in": [
+            "All-Inclusive Signature Experience"
+          ]
+        },
+        {
+          "name": "Lakeside camping",
+          "price": 3000,
+          "unit": "per tent",
+          "included_in": [
+            "All-Inclusive Signature Experience"
+          ]
+        },
+        {
+          "name": "Yoga session with instructor",
+          "price": 0,
+          "unit": "on request",
+          "included_in": [
+            "All-Inclusive Signature Experience"
+          ]
+        },
+        {
+          "name": "Live barbecue or self-cooking",
+          "price": 0,
+          "unit": "on request",
+          "included_in": [
+            "All-Inclusive Signature Experience"
+          ]
         },
         {
           "name": "Horse riding",
           "price": 999,
-          "unit": "per person"
+          "unit": "per person",
+          "included_in": []
+        },
+        {
+          "name": "Private live cooking by our chef",
+          "price": 0,
+          "unit": "on request",
+          "included_in": []
         },
         {
           "name": "Udaipur city tour by cab",
           "price": 2500,
-          "unit": "per cab"
+          "unit": "per cab",
+          "included_in": []
         },
         {
           "name": "Decoration (birthday / anniversary)",
           "price": 0,
-          "unit": "on request"
+          "unit": "on request",
+          "included_in": []
         }
       ],
       "valid_until": "2026-12-19",

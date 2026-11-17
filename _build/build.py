@@ -966,7 +966,7 @@ def explore_page():
   </div>
   <div class="q"><h3>Choose your package</h3><p class="hint">Rates per night, before GST</p><div class="opts" id="pl-stay"></div></div>
   <div class="q" id="q-meal"><h3>Meals</h3><div class="opts" id="pl-meal"></div></div>
-  <div class="q"><h3>Add experiences</h3><p class="hint">Pick as many as you like</p><div class="chips" id="pl-exp"></div></div>
+  <div class="q"><h3>Add experiences</h3><p class="hint">Any package can add any experience. Items in your package are free, others are charged as shown.</p><div class="chips" id="pl-exp"></div></div>
   <div class="sticky-cta" style="margin-top:24px"><button class="btn" id="to-est" disabled>Choose a stay option</button></div>
 </section>
 
