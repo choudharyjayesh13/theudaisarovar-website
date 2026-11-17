@@ -957,15 +957,15 @@ def explore_page():
   {top}
   <div class="pad" style="padding-bottom:0"><span class="label">Step 2 · Design your own stay</span><h2 id="pl-title" style="margin-top:10px"></h2></div>
   <div class="q"><h3>What's the occasion?</h3><div class="chips" id="pl-occ"></div></div>
-  <div class="q"><h3>When &amp; how many?</h3>
+  <div class="q"><h3>When &amp; how many?</h3><p class="hint" id="pl-valid" style="color:var(--brass-d)"></p>
     <div class="row"><label class="field">Check-in<input type="date" id="pl-in"></label><label class="field">Check-out<input type="date" id="pl-out"></label></div>
     <div class="row">
       <div class="field">Adults<div class="stepper"><button data-step="adults" data-d="-1" aria-label="Fewer adults">−</button><b id="pl-ad">2</b><button data-step="adults" data-d="1" aria-label="More adults">+</button></div></div>
       <div class="field">Children<div class="stepper"><button data-step="kids" data-d="-1" aria-label="Fewer children">−</button><b id="pl-kd">0</b><button data-step="kids" data-d="1" aria-label="More children">+</button></div></div>
     </div>
   </div>
-  <div class="q"><h3>Where would you like to stay?</h3><p class="hint">Starting rates per night, before GST</p><div class="opts" id="pl-stay"></div></div>
-  <div class="q"><h3>Meals</h3><div class="opts" id="pl-meal"></div></div>
+  <div class="q"><h3>Choose your package</h3><p class="hint">Rates per night, before GST</p><div class="opts" id="pl-stay"></div></div>
+  <div class="q" id="q-meal"><h3>Meals</h3><div class="opts" id="pl-meal"></div></div>
   <div class="q"><h3>Add experiences</h3><p class="hint">Pick as many as you like</p><div class="chips" id="pl-exp"></div></div>
   <div class="sticky-cta" style="margin-top:24px"><button class="btn" id="to-est" disabled>Choose a stay option</button></div>
 </section>

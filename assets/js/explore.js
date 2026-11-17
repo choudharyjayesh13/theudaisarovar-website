@@ -109,12 +109,19 @@
     $('#pl-title').textContent = 'Plan your stay at ' + p.name;
     $('#pl-occ').innerHTML = D.occasions.map(function (o) { return '<button class="chip' + (S.occasion === o ? ' on' : '') + '" data-v="' + esc(o) + '">' + esc(o) + '</button>'; }).join('');
     var din = $('#pl-in'), dout = $('#pl-out'), t = new Date();
-    din.min = iso(t); if (!S.inDate) { var a = new Date(t.getTime() + 7 * 864e5); S.inDate = iso(a); S.outDate = iso(new Date(a.getTime() + 864e5)); }
+    var last = p.valid_until || '', lastIn = last ? iso(new Date(new Date(last).getTime() - 864e5)) : '';
+    din.min = iso(t); din.max = lastIn; dout.max = last;
+    if (!S.inDate) { var a = new Date(t.getTime() + 7 * 864e5); S.inDate = iso(a); S.outDate = iso(new Date(a.getTime() + 864e5)); }
+    if (lastIn && S.inDate > lastIn) { S.inDate = iso(t) > lastIn ? lastIn : iso(t); }
+    if (last && S.outDate > last) S.outDate = last;
+    if (S.outDate <= S.inDate) S.outDate = iso(new Date(new Date(S.inDate).getTime() + 864e5));
     din.value = S.inDate; dout.value = S.outDate; dout.min = S.inDate;
+    $('#pl-valid').textContent = p.package_note || '';
     $('#pl-ad').textContent = S.adults; $('#pl-kd').textContent = S.kids;
     $('#pl-stay').innerHTML = p.stay_options.map(function (o, i) {
-      return '<button class="opt' + (S.stay === i ? ' on' : '') + '" data-i="' + i + '"><b>' + esc(o.name) + '</b><span class="pr">' + priceText(o.price, o.unit) + '</span><small>' + esc(o.detail) + '</small></button>';
+      return '<button class="opt' + (S.stay === i ? ' on' : '') + '" data-i="' + i + '"><b>' + esc(o.name) + '</b><span class="pr">' + priceText(o.price, o.unit) + '</span><small>' + esc(o.detail) + '</small>' + (o.includes && o.includes.length ? '<ul class="inc">' + o.includes.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') + '</button>';
     }).join('');
+    $('#q-meal').style.display = p.meals.length > 1 ? '' : 'none';
     $('#pl-meal').innerHTML = p.meals.map(function (m, i) {
       return '<button class="opt' + (S.meal === i ? ' on' : '') + '" data-i="' + i + '"><b>' + esc(m.name) + '</b><span class="pr">' + (i === 0 && !m.price ? '' : priceText(m.price, 'per room / night')) + '</span></button>';
     }).join('');
@@ -130,7 +137,7 @@
     S.inDate = e.target.value; var o = new Date(S.inDate); o.setDate(o.getDate() + 1);
     if (!S.outDate || S.outDate <= S.inDate) S.outDate = iso(o); renderPlan();
   });
-  $('#pl-out').addEventListener('change', function (e) { S.outDate = e.target.value; });
+  $('#pl-out').addEventListener('change', function (e) { var mx = S.prop.valid_until; S.outDate = mx && e.target.value > mx ? mx : e.target.value; renderPlan(); });
   document.querySelectorAll('[data-step]').forEach(function (b) {
     b.addEventListener('click', function () {
       var k = b.dataset.step, d = +b.dataset.d; S[k] = Math.max(k === 'adults' ? 1 : 0, Math.min(40, S[k] + d));
@@ -145,7 +152,7 @@
   /* ---------- 4. estimate ---------- */
   function rooms(o) {
     if (!o.guests) return 1;
-    var per = /cottage|room$/i.test(o.name) && o.guests <= 4 ? o.guests : 0;
+    var per = o.guests && o.guests <= 4 ? o.guests : 0;
     return per ? Math.max(1, Math.ceil((S.adults + S.kids * 0.5) / per)) : 1;
   }
   function calc() {

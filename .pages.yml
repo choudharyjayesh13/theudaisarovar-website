@@ -665,6 +665,8 @@ content:
           - { name: location, label: Location, type: string }
           - { name: cover, label: "Cover photo", type: image, options: { media: photos } }
           - { name: intro, label: "About the property", type: text }
+          - { name: valid_until, label: "Last check-out date for these rates (YYYY-MM-DD, e.g. 2026-12-19)", type: string }
+          - { name: package_note, label: "Note above dates (e.g. Package rates valid till 19 December)", type: string }
           - name: facts
             label: "Numbers (max 4)"
             type: object
@@ -695,6 +697,7 @@ content:
               - { name: price, label: "Price in ₹ (0 = on request)", type: number }
               - { name: unit, label: "per (night / day)", type: string }
               - { name: guests, label: "Guests per room/unit (0 = whole property)", type: number }
+              - { name: includes, label: "What's included", type: string, list: true }
           - name: meals
             label: Meal options (first one is the default)
             type: object
