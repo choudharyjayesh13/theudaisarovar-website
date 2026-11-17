@@ -194,7 +194,7 @@
         {
           "name": "Cottage Comfort",
           "detail": "For 2 guests · per cottage, per night",
-          "price": 6999,
+          "price": 8499,
           "unit": "night",
           "guests": 2,
           "includes": [
@@ -206,7 +206,7 @@
         {
           "name": "Romantic Half Board",
           "detail": "For 2 guests · per cottage, per night",
-          "price": 8500,
+          "price": 9999,
           "unit": "night",
           "guests": 2,
           "includes": [
@@ -220,7 +220,7 @@
         {
           "name": "All-Inclusive Signature Experience",
           "detail": "For 2 guests · per cottage, per night",
-          "price": 10999,
+          "price": 12499,
           "unit": "night",
           "guests": 2,
           "includes": [
